@@ -1,0 +1,12 @@
+Version 0.0.1
+
+<h2 align=center>t1a05-Input-Output-By-Jamie</h2>
+
+<input id="myNumber" type=number value="4" ><br>
+
+<input type=button value="Squared" onClick="{
+let number1 = document.getElementById('myNumber').value
+document.getElementById('output01').innerHTML = number1 + ' squared = ' + number1*number1
+}"><br>
+
+<div id="output01">...</div>
