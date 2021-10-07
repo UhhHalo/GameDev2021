@@ -9,6 +9,9 @@ let number1 = document.getElementById('myNumber').value
 document.getElementById('output01').innerHTML = number1 + ' squared = ' + number1*number1
 }"><br>
 
+<!-------------------------------------------->
+
+
 <div id="output01">...</div>
 
 
@@ -66,16 +69,25 @@ document.getElementById('output06').innerHTML = (parseFloat(number9)/parseFloat(
 <div id="output06">...</div>
 
 
-
-
 <input id="aNumber1" type=number value="1.8" > <input id="aNumber2" type=number value="1.5" > <br> 
 
-<input type=button value="Divisions" onClick="{
+<input type=button value="Decimals" onClick="{
 let theNumber2 = document.getElementById('aNumber1').value
 let theNumber3 = document.getElementById('aNumber2').value                                             
 document.getElementById('output07').innerHTML = (parseFloat(theNumber2)*parseFloat(theNumber3))
 }"><br>
 
 <div id="output07">...</div>
+
+
+
+<input id="aNumber4" type=number value="0" > <br>
+
+<input type=button value="Square Root" onClick="{
+let theNumber4 = document.getElementById('aNumber4').value                                             
+document.getElementById('output08').innerHTML = (parseFloat(theNumber4)/parseFloat(theNumber4))
+}"><br>
+
+<div id="output08">...</div>
 
 
