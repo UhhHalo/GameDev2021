@@ -19,15 +19,15 @@ Mr.Ellis prefers document.myVarName<br>
 
 <h4> Example of Working Code</h4>
 
-<input id="myText01" type=text value="What the dog doin? " ><br>
+<input id="myText01" type=text value="dog" ><br>
 
 <input type=button value="The Variable" onClick="{
   let myIn01 = document.getElementById('myText01').value
-                                                 document.getElementById('myDiv01').innerHTML = MyIn01
+  document.getElementById('myDiv01').innerHTML = myIn01
 }"><br>
 
 <input type=button value="No Variable" onClick="{
-  document.getElementById('myDiv01').innterHTML =
+  document.getElementById('myDiv01').innerHTML =
                                                 document.getElementById('myText01').value
 }"><br>
 
