@@ -28,7 +28,17 @@ Mr.Ellis prefers document.myVarName<br>
 
 <input type=button value="No Variable" onClick="{
   document.getElementById('myDiv01').innerHTML =
-                                                document.getElementById('myText01').value
+  document.getElementById('myText01').value
 }"><br>
 
 <div id="myDiv01">...</div>
+
+
+input id="myText02" type=text value="John" ><br>
+
+<input type=button value="Submit" onClick="{
+  let myIn02 = document.getElementById('myText02').value
+  document.getElementById('myDiv02').innerHTML = 'Hello there ' + myIn02 ' Thanks for coming!'
+}"><br>
+
+<div id="myDiv02">...</div>
