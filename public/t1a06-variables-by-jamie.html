@@ -62,7 +62,6 @@ Mr.Ellis prefers document.myVarName<br>
 
 <h4><--------------------------------------------------------------------------------------------></h4>
 
-
   <h4> Inflation from 1980-2021 </h4>
   <input id="my1980Currency" type=number value="5.25" ><br>
   
@@ -72,5 +71,18 @@ Mr.Ellis prefers document.myVarName<br>
     }"><br>
 
   <div id="myDiv04">...</div>
+
+
+<h4><--------------------------------------------------------------------------------------------></h4>
+
+  <h4> American $ to Canadian $ Exchange Rate </h4>
+  <input id="myAmericanMoney" type=number value="1" ><br>
+  
+  <input type=button value="Submit" onClick="{
+    let myAmericanExchange = document.getElementById('myAmericanMoney').value
+    document.getElementById('myDiv05').innerHTML = ' Your $' + parseFloat(myAmericanExchange) + ' in USD will give you' + (parseFloat(myAmericanExchange)*parseFloat(1.25)) + ' in CAD'
+    }"><br>
+
+  <div id="myDiv05">...</div>
 
   
