@@ -98,3 +98,16 @@ Mr.Ellis prefers document.myVarName<br>
     }"><br>
 
   <div id="myDiv06">...</div>
+
+ <h4><--------------------------------------------------------------------------------------------></h4>
+  
+ <h4> Type how much $ you want from a loan </h4>
+  <input id="myPayment" type=number value="7498" ><br>
+  
+  <input type=button value="Submit" onClick="{
+    let myLoan = document.getElementById('myPayment').value
+    document.getElementById('myDiv07').innerHTML = ' You are about to apply for a loan for  ' + parseFloat(myLoan) + ' with a rate of %2 which will equal ' + (parseFloat(myLoan)x2.91)
+                                                                                                                           
+    }"><br>
+
+  <div id="myDiv07">...</div>
