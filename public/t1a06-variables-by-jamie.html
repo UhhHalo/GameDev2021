@@ -126,3 +126,15 @@ Mr.Ellis prefers document.myVarName<br>
   <div id="myDiv07">...</div>
 
 
+<h4><--------------------------------------------------------------------------------------------></h4>
+  
+ <h4> Type a Random Word </h4>
+  <input id="myRandomWord" type=text value="Dictionary" ><br>
+  
+  <input type=button value="Submit" onClick="{
+    let myWord = document.getElementById('myRandomWord').value
+    document.getElementById('myDiv08').innerHTML = myWord + ' is the word you have written'
+   }"><br>
+
+  <div id="myDiv08">...</div>
+
