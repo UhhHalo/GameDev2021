@@ -1,1 +1,43 @@
-hi
+
+<h4> Example Functions code</h4>
+<pre>
+function myGrabNumber(){
+	return parseInt(document.getElementById('myText01').value)
+}
+</pre>
+
+
+<h4> Example working code</h4>
+
+<input type=text id="myText01" value="3"><br>
+
+<input type=button value="Function Example" onClick="{
+	document.getElementById('myDiv01').innerHTML = myExampleFunction()
+}">
+
+<div id="myDiv01">...</div>
+
+<--------------------------------------------------------------------------------->
+
+<h4> Random Number 1-1000</h4>
+
+<input type=text id="myText02" value="3"><br>
+
+<input type=button value="Click For a Random Number" onClick="{
+	document.getElementById('myDiv02').innerHTML = myRandomNumber()
+}">
+
+<div id="myDiv02">...</div>
+
+
+<--------------------------------------------------------------------------------->
+
+<h4> </h4>
+
+<input type=text id="myText03" value="3"><br>
+
+<input type=button value="Function Example" onClick="{
+	document.getElementById('myDiv03').innerHTML = myRandomNumber()
+}">
+
+<div id="myDiv02">...</div>
