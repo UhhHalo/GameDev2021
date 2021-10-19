@@ -19,5 +19,93 @@ let myGreeting = 'Good Day';
 <input id="myNum01" type=number value="4" ><br>
 
 <input type=button value="Simple if Statement" onClick="{
-                                                        alert('hi')
+	let myIn01 = parseFloat(document.getElementById('myNum01').value)
+	if (myIn01 >= 3){
+		document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+}                                                    
+}">
+
+<input type=button value="if...else" onClick="{
+ 	let myIn01 = parseFloat(document.getElementById('myNum01').value)
+	if (myIn01 >= 3){
+	document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+	} else {
+		document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
+}"> 
+
+<input type=button value="Complex if" onClick="{
+	let myIn01 = parseFloat(document.getElementById('myNum01').value)
+	if (myIn01 != 3 || myIn01 > -3 && myIn01 <=100 ){
+	document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
+} else {
+	document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
+}">
+
 <div id="myDiv01">...</div>
+
+<--------------------------------------------------------------------------------------->
+
+<h4> Example One: If x > 10<br>
+
+<input id="myNum02" type=number value="7" ><br>
+
+<input type=button value="Enter" onClick="{
+ 	let myIn02 = parseFloat(document.getElementById('myNum02').value)
+	if (myIn02 > 10){
+	document.getElementById('myDiv02').innerHTML = myIn02 + ' Is greater than ten'
+	} else {
+		document.getElementById('myDiv02').innerHTML = myIn02 + ' is less than ten'}
+}">
+
+<div id="myDiv02">...</div>
+
+
+<--------------------------------------------------------------------------------------->
+
+<h4> Example Two: If x == 24<br>
+
+<input id="myNum03" type=number value="29" ><br>
+
+<input type=button value="Enter" onClick="{
+ 	let myIn03 = parseFloat(document.getElementById('myNum03').value)
+	if (myIn03 == 24){
+	document.getElementById('myDiv03').innerHTML = myIn03 + ' is EQUAL to 24'
+	} else {
+		document.getElementById('myDiv03').innerHTML = myIn03 + ' is NOT EQUAL to 24'}
+}">
+
+<div id="myDiv03">...</div>
+
+
+<--------------------------------------------------------------------------------------->
+
+<h4> Example Three: If x <= 111 <br>
+
+<input id="myNum04" type=number value="112" ><br>
+
+<input type=button value="Enter" onClick="{
+ 	let myIn04 = parseFloat(document.getElementById('myNum04').value)
+	if (myIn04 <= 111){
+	document.getElementById('myDiv04').innerHTML = myIn04 + ' is SMALLER than 111'
+	} else {
+		document.getElementById('myDiv04').innerHTML = myIn04 + ' is HIGHER than 111'}
+}">
+
+<div id="myDiv04">...</div>
+
+
+<--------------------------------------------------------------------------------------->
+
+<h4> Example Four: If x >= 99 <br>
+
+<input id="myNum05" type=number value="74" ><br>
+
+<input type=button value="Enter" onClick="{
+ 	let myIn05 = parseFloat(document.getElementById('myNum05').value)
+	if (myIn05 >= 99){
+	document.getElementById('myDiv05').innerHTML = myIn05 + ' is HIGHER or EQUAL to 99 '
+	} else {
+		document.getElementById('myDiv05').innerHTML = myIn05 + ' is SMALLER than 99'}
+}">
+
+<div id="myDiv05">...</div>
