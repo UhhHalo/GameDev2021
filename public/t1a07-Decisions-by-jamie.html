@@ -109,3 +109,23 @@ let myGreeting = 'Good Day';
 }">
 
 <div id="myDiv05">...</div>
+
+
+
+<--------------------------------------------------------------------------------------->
+
+<h4> Example Five: If x > 1 && x < 100 <br>
+
+<input id="myNum06" type=number value="74" ><br>
+
+<input type=button value="Complex if" onClick="{
+	let myIn06 = parseFloat(document.getElementById('myNum06').value)
+	if (myIn06 > 1 && myIn06 < 100 ){
+	document.getElementById('myDiv06').innerHTML = ' True '
+} else {
+	document.getElementById('myDiv06').innerHTML = ' False'}
+}">
+
+<div id="myDiv06">...</div>
+
+  Note: ! = Not, && = And, || = OR
