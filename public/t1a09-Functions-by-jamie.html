@@ -15,8 +15,8 @@ function myRandomNumber(){
 }
 	
 function myChangeColor(){
-	let myColor = document.write(str.fontcolor( "black" ));
-	return myColor
+	document.getElementById('id').style.color = 'red'
+	
 }
 
 
@@ -25,8 +25,6 @@ function myChangeColor(){
 Version 0.0.4
 
 <h2 align=center>t1a09-functions-by-Jamie.html</h2>
-
-
 
 <h4> Example Functions code</h4>
 <pre>
@@ -56,11 +54,12 @@ function myGrabNumber(){
 
 <div id="myDiv02">...</div>
 
+
+
 <h4> Change Font Color</h4>
 
-<b id="myText" style="color:#0000ff;"> Press the Button to change the color </b>
-<input type=button value=Change onclick="{
-					document.getElementById('myText').innerHTML = myColor()
-                                         }"><br>
+<b id="id" style="color:blue;"> Text
 
-<div id="myDiv03">...</div>
+<input type=button value="Click Here!" onClick="{
+	myChangeColor()
+}">
