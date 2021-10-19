@@ -13,6 +13,11 @@ function myRandomNumber(){
 	let myNumber = Math.floor(Math.random() * 1001);
 	return myNumber
 }
+	
+function myChangeColor(){
+	let myColor = document.write(str.fontcolor( "blue" ));
+	return myColor
+}
 
 
 </script>
@@ -50,5 +55,12 @@ function myGrabNumber(){
 }">
 
 <div id="myDiv02">...</div>
+
+<h4> Change Font Color</h4>
+
+<b id="myText" style="color:#0000ff;"> Press the Button to change the color </b>
+<input type=button value=Change onclick="{
+					document.getElementById('myDiv03').innerHTML = myColor()
+                                         }"><br>
 
 
