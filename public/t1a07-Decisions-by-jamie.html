@@ -144,5 +144,22 @@ let myGreeting = 'Good Day';
 
 <div id="myDiv07">...</div>
 
+<----------------------------------------------------------------------------------------->
+
+<h4> Example Seven: If x / 2 <br>
+
+<input id="myNum08" type=number value="5" ><br>
+
+<input type=button value="Enter" onClick="{
+ 	let myIn08 = parseFloat(document.getElementById('myNum08').value)
+	if (myIn08 / 2){
+	document.getElementById('myDiv08').innerHTML = myIn08 + ' is an even number '
+	} else {
+		document.getElementById('myDiv08').innerHTML = myIn08 + ' is an odd number'}
+}">
+
+<div id="myDiv08">...</div>
+
+
 
   Note: ! = Not, && = And, || = OR
