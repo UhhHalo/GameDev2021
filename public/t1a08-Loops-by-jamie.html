@@ -1,43 +1,34 @@
-Version 0.0.1
+version 0.0.1
 
-<h2 align=center>t1a08-loops-by-Jamie.html</h2>
+<h2 align=center>t1a08-loops-by-jamie.html</h2>
 
-<a href="">Good reference to Javascript Loops</a><br>
+<a href=""> Good reference to Javascript Loops</a><br>
 
-<h4> Example input output code</h4> 
+<h4> Example of Input/Output Code</h4>
+<pre>
 
-Max loops: <input id="myNum01" type=number value="4" ><br>
+</pre>
 
-<input type=button value="Basic For Loops with Decisions" onClick="{
+<h4> Example Working Code</h4>
+
+Max Loops: <input id="myNum01" type=number value="4" ><br>
+
+<input type=button value="Basic For Loop with Decisions" onClick="{
 	document.getElementById('myDiv01').innerHTML = ''
-	let myTemp = ''
-	
+	let myTmep = ''
+								  
 	let myMax = parseInt(document.getElementById('myNum01').value)
-	
-	for (let myLoop = 0; myLoop <= myMax; myLoop++ ){
+								  
+	for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+								  
 		if (myLoop * 2 > myMax){
-		myTemp += ' cool '
-		}
+			myTemp+= ' cool '
+			}
 		
-		myTemp += 'Loop number:  ' + myLoop + '<br>'
-		}
-		document.getElementById('myDiv01').innerHTML = myTemp
-		}">
-
-	<input type=button value="Basic For loop only" onClick="{
-		let myTemp = ''
-		let myMax = parseInt(document.getElementById('myNum01').value)
-		for (let myLoop = 0; myLoop < myMax; myLoop++ ({
-			myTemp += 'Loop number: ' + myLoop + '<br>'
+		myTemp += 'Loop Number: ' + myLoop + '<br>'
 		}
 		document.getElementById('myDiv01').innerHTML = myTemp
-								}">
+}">
 
-	<input type=button value="Even number Identifier" onClick ="{
-		document.getElementById('myDiv01').innerHTML = ''
-		let myTemp = ''
-		
-		let myMax = parseInt(document.getElementById('myNum01').value)
-		
-		<div id="myDiv01">...</div>
+<div id="myDiv01">...</div>
 		
