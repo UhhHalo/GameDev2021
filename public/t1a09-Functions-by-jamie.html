@@ -24,6 +24,11 @@ function myChangeColorBack(){
 	
 }
 
+function myMathMultiplication(){
+	let myNumber01 = document.getElementById('myNumber01').value
+	let myNumber02 = document.getElementById('myNumber02').value
+	let myAnswer = document.getElementById('multiplicationOutput').innerHTML = (parseFloat(myNumber01)*parseFloat(myNumber02))
+	return myAnswer
 
 </script>
 
@@ -72,3 +77,10 @@ function myGrabNumber(){
 <input type=button value="Change Color back!" onClick="{
 	myChangeColorBack()
 }">
+
+
+	<h4> Multiplication</h4>
+	
+<input id="myNumber01" type=number value="2" > <input id="myNumber02" type=number value="9" > <br> 
+<input type=button value="Enter" onClick="{
+	myMathMultiplication()
