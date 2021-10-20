@@ -152,7 +152,7 @@ let myGreeting = 'Good Day';
 
 <input type=button value="Enter" onClick="{
  	let myIn08 = parseFloat(document.getElementById('myNum08').value)
-	if (myIn08 / 2){
+	if (myIn08 % 2 == 0){
 	document.getElementById('myDiv08').innerHTML = myIn08 + ' is an even number '
 	} else {
 		document.getElementById('myDiv08').innerHTML = myIn08 + ' is an odd number'}
