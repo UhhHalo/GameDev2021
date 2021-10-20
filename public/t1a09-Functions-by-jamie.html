@@ -27,7 +27,7 @@ function myChangeColorBack(){
 function myMathMultiplication(){
 	let myNumber01 = document.getElementById('myNumber01').value
 	let myNumber02 = document.getElementById('myNumber02').value
-	let myAnswer  = (parseFloat(myNumber01)*parseFloat(myNumber02))
+	document.getElementById('myAnswer').innerHTML  = (parseFloat(myNumber01)*parseFloat(myNumber02))
 	return myAnswer
 
 }
