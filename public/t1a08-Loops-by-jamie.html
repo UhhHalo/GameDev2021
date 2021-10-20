@@ -1,44 +1,37 @@
-version 0.0.1
+Version 0.0.1
 
-<h2 align=center>t1a08-loops-by-jamie.html</h2>
+<h2 align=center>t1a08-loops-by-Jamie.html</h2>
 
-<a href=""> Good reference to Javascript Loops</a><br>
+<a href="">Good reference to Javascript Loops</a><br>
 
-<h4> Example of Input/Output Code</h4>
-<pre>
+<h4> Example input output code</h4> 
 
-</pre>
+Max loops: <input id="myNum01" type=number value="4" ><br>
 
-<h4> Example Working Code</h4>
-
-Max Loops: <input id="myNum01" type=number value="4" ><br>
-
-<input type=button value="Basic For Loop with Decisions" onClick="{
+<input type=button value="Basic For Loops with Decisions" onClick="{
 	document.getElementById('myDiv01').innerHTML = ''
-	let myTmep = ''
-								  
+	let myTemp = ''
+	
 	let myMax = parseInt(document.getElementById('myNum01').value)
-								  
-	for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-								  
+	
+	for (let myLoop = 0; myLoop <= myMax; myLoop++ ){
 		if (myLoop * 2 > myMax){
-			myTemp+= ' cool '
-			}
+		myTemp += ' cool '
+		}
 		
-		myTemp += 'Loop Number: ' + myLoop + '<br>'
+		myTemp += 'Loop number:  ' + myLoop + '<br>'
 		}
 		document.getElementById('myDiv01').innerHTML = myTemp
-}">
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div id="myDiv01">...</div>
+		}">
 		
+		<div id="myDiv01">...</div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
