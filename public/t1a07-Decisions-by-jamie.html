@@ -128,4 +128,21 @@ let myGreeting = 'Good Day';
 
 <div id="myDiv06">...</div>
 
+<----------------------------------------------------------------------------------------->
+
+<h4> Example Six: If x != 22 <br>
+
+<input id="myNum07" type=number value="62" ><br>
+
+<input type=button value="Enter" onClick="{
+ 	let myIn07 = parseFloat(document.getElementById('myNum07').value)
+	if (myIn07 != 22){
+	document.getElementById('myDiv07').innerHTML = myIn07 + ' True '
+	} else {
+		document.getElementById('myDiv05').innerHTML = myIn05 + ' False'}
+}">
+
+<div id="myDiv07">...</div>
+
+
   Note: ! = Not, && = And, || = OR
