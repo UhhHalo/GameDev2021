@@ -16,22 +16,28 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 	
 	for (let myLoop = 0; myLoop <= myMax; myLoop++ ){
 		if (myLoop * 2 > myMax){
-		document.getElementById('myDiv01').innerHTML += ' cool '
+		myTemp += ' cool '
 		}
 		
 		myTemp += 'Loop number:  ' + myLoop + '<br>'
 		}
 		document.getElementById('myDiv01').innerHTML = myTemp
 		}">
+
+	<input type=button value="Basic For loop only" onClick="{
+		let myTemp = ''
+		let myMax = parseInt(document.getElementById('myNum01').value)
+		for (let myLoop = 0; myLoop < myMax; myLoop++ ({
+			myTemp += 'Loop number: ' + myLoop + '<br>'
+		}
+		document.getElementById('myDiv01').innerHTML = myTemp
+								}">
+
+	<input type=button value="Even number Identifier" onClick ="{
+		document.getElementById('myDiv01').innerHTML = ''
+		let myTemp = ''
+		
+		let myMax = parseInt(document.getElementById('myNum01').value)
 		
 		<div id="myDiv01">...</div>
 		
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
