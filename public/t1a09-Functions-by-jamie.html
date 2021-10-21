@@ -32,8 +32,13 @@ function myMathMultiplication(){
 
 }
 
-function myVariableChange(){
-	document.getElementById('
+function myOpacityLevel(){
+	document.getElementById("opacity").style.opacity = 1
+
+}
+	
+function myOpacityLevelBack(){
+	document.getElementById("opacity").style.opacity = 0.5
 
 }
 
@@ -84,7 +89,7 @@ function myGrabNumber(){
 <input type=button value="Change Color back!" onClick="{
 	myChangeColorBack()
 }">
-
+</b>
 
 	<h4> Multiplication</h4>
 	
@@ -95,14 +100,15 @@ function myGrabNumber(){
 
 <div id="myAnswer">...</div>
 
-
-
-<h4> Change Variable</h4>
-
-<input type=text id="changeNumber" value="3"><br>
-
-<input type=button value="Function Example" onclick="{
-	 document.getElementById('myDiv06').innerHTML = myExampleFunction()
+<input type=button value="Change Opacity" onClick="{
+	myOpacityLevel()
 }">
 
-<div id="myDiv06">...</div>
+<input type=button value="Change Opacity Back" onClick="{
+	myOpacityLevelBack()
+}">
+
+<br><br><br>
+<b id="opacity" style="opacity: 0.5;"> Opacity </b>
+
+<br><br><br>
