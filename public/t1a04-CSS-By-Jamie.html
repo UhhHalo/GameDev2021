@@ -1,6 +1,11 @@
 Version 0.0.5</br>
 <h1 align=center>T1A04 CSS by Jamie</h1>
 
+<style>
+body { 
+background-color: green; 
+</style>
+
 Reference Link
 <a href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br>
 
@@ -14,11 +19,71 @@ color: #00ff00;
 CSS inside the tag overpowers all other methods<br>
 
 <b id="theText" style="color:#0000ff; background-Color:red; "> The Text and Background Will Change Colors </b>
-<input type=button value=Change onclick="{
+<input type=button value=change onclick="{
                                          document.getElementById('theText').style.color = 'orange'
                                          document.getElementById('theText').style.backgroundColor = 'purple'
+                                         }">
+<input type=button value=changeBack onclick="{
+                                         document.getElementById('theText').style.color = '#0000ff'
+                                         document.getElementById('theText').style.backgroundColor = 'red'
                                          }"><br>
-<b id="gr"style="color:red;">This text is red </b>
-<input type=button value=ChangeColor onClick="{
-document.getElementById("gr").style.color = blue
+
+<b id="gr" style="color:red;">This text is red </b>
+<input type=button value=turnBlue onClick="{
+document.getElementById('gr').style.color = 'blue'
 }"><br>
+
+
+<b id="gr2" style="opacity:0.3;">This text is on 0.3 opacity </b>
+<input type=button value=changeOpacity onClick="{
+document.getElementById('gr2').style.opacity = 1
+}"><br>
+
+<b id="fortnite" style= "background-color: #FFF44F; ">This text is highlighted </b></br><br>
+
+<b id="border" style="border-style:dotted;"> This is a dotted border</b><br><br>
+<b id="border1" style="border-style:solid;"> This is a solid border</b><br><br>
+
+
+<b id="bordertest" style="border-style:dotted;"> Change the type of border</b><br>
+<input type=button value=Solid onclick="{
+                                         document.getElementById('bordertest').style.border = 'solid'
+                                         }"><br>
+<input type=button value=Dotted onclick="{
+                                         document.getElementById('bordertest').style.border = 'dotted'
+                                         }"><br><br>
+
+
+
+<b id="everythingCombined" style= "color:#0000ff; background-Color:pink; border-style:dotted;"> Change Everything</b><br>
+<input type=button value=changeTextColor onclick="{
+                                         document.getElementById('everythingCombined').style.color = 'orange'
+                                         }">
+
+
+<input type=button value=changeBackground onclick="{
+                                         document.getElementById('everythingCombined').style.backgroundColor = 'purple'
+                                         }">
+
+<input type=button value=changeOpacity onclick="{
+                                         document.getElementById('everythingCombined').style.opacity = 0.5
+                                         }">
+
+<input type=button value=changeBorder onclick="{
+                                         document.getElementById('everythingCombined').style.border = 'solid'
+                                         }">
+
+<input type=button value=changeBorderBack onclick="{
+                                         document.getElementById('everythingCombined').style.border = 'dotted'
+                                         }"><br><br><br>
+
+
+
+<b id="everythingCombined2" style= "color:#0000ff; background-Color:pink; border-style:dotted;"> One Click</b><br>
+
+<input type=button value=changeEverything onclick="{
+					 document.getElementById('everythingCombined2').style.color = 'orange'
+					 document.getElementById('everythingCombined2').style.backgroundColor = 'purple'
+                                         document.getElementById('everythingCombined2').style.border = 'solid'
+					 document.getElementById('everythingCombined2').style.opacity = 0.5
+                                         }"><br>
