@@ -1,1 +1,99 @@
-jo
+Version 0.0.1
+<h2 center=align>T1a10 Events By Jamie </h2>
+
+<style>
+body { 
+background-color: blue; 
+</style>
+
+<h4> Copy Text <h4>
+<input type="text" oncopy="copyFunction()" value="Copy this text">
+
+<script>
+function copyFunction() {
+  document.getElementById("copy").innerHTML = "The text has been copied! Good job."
+}
+</script>
+
+<p id="copy"></p>
+
+<h4> Hover Over </h4>
+
+<input type="button" onMouseOver="hoverFunction()" value="Hover over the button">
+
+<script>
+function hoverFunction() {
+  document.getElementById("hover").innerHTML = "The button has been hovered over"
+}
+</script>
+
+<p id="hover"></p>
+
+<h4> Hover Off </h4>
+
+<input type="button" onMouseOut="hoverOutFunction()" value="hover off the button">
+
+<script>
+function hoverOutFunction() {
+  document.getElementById("hover2").innerHTML = "The button has been hovered off"
+}
+</script>
+
+<p id="hover2"></p>
+
+<h4> Double Clicking </h4>
+
+<input type="button" ondblclick="ondblclickFunction()" value="Double click this button">
+
+<script>
+function ondblclickFunction() {
+  document.getElementById("dblclick").innerHTML = "The button has been double clicked!"
+}
+</script>
+
+<p id="dblclick"></p>
+
+<h4> Mouse Wheel </h4>
+
+<div onwheel="wheelFunction()"> Use the mouse wheel on me</div>
+<script>
+function wheelFunction() {
+  document.getElementById("wheel").innerHTML = "Your scroll wheel was used."
+}
+</script>
+
+<p id="wheel"></p>
+
+
+
+<h4> Key Press </h4>
+
+<input type="text" onKeyPress="copyFunction()" value="">
+
+<script>
+function copyFunction() {
+  document.getElementById("keypress").innerHTML = "Key input has been detected"
+}
+</script>
+
+<p id="keypress"></p>
+
+<h4> On Focus
+
+Textbox 1: <input type="text" id="1text" onfocus="onFocusFunction(this.id)"><br>
+Textbox 2: <input type="text" id="2text" onfocus="onFocusFunction(this.id)">
+
+<script>
+function onFocusFunction(x) {
+  document.getElementById(x).style.background = "green";
+}
+</script>
+
+<div ontouchmove="onTouchMoveFunction()"> Move your finger over this</div>
+<script>
+function onTouchMoveFunction() {
+  document.getElementById("touchmove").innerHTML = "onTouch detected"
+}
+</script>
+
+<p id="touchmove"></p>
