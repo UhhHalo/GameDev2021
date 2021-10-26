@@ -90,7 +90,7 @@ function onFocusFunction(x) {
 
 <h4> Touch Move (Mobile) </h4>
 
-<div ontouchmove="onTouchMoveFunction()"> Move your finger over this</div>
+<input type="button" ontouchmove="onTouchMoveFunction()" value="Move your finger on here">
 <script>
 function onTouchMoveFunction() {
   document.getElementById("touchmove").innerHTML = "onTouch detected"
