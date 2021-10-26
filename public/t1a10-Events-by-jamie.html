@@ -78,16 +78,17 @@ function copyFunction() {
 
 <p id="keypress"></p>
 
-<h4> On Focus
+<h4> On Focus <h4/><br>
 
 Textbox 1: <input type="text" id="1text" onfocus="onFocusFunction(this.id)"><br>
-Textbox 2: <input type="text" id="2text" onfocus="onFocusFunction(this.id)">
-
+Textbox 2: <input type="text" id="2text" onfocus="onFocusFunction(this.id)"><br>
 <script>
 function onFocusFunction(x) {
   document.getElementById(x).style.background = "green";
 }
 </script>
+
+<h4> Touch Move (Mobile) </h4>
 
 <div ontouchmove="onTouchMoveFunction()"> Move your finger over this</div>
 <script>
