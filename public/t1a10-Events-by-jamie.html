@@ -108,3 +108,16 @@ function onScrollFunction() {
 </script>
 
 <p id="scroll"></p>
+
+<!------------------------------------------>
+
+<h4> Touch End (Mobile) </h4>
+
+<input type="button" ontouchmoveend="onTouchEndFunction()" value="Move your finger on here">
+<script>
+function onTouchMoveEndFunction() {
+  document.getElementById("touchMovEend").innerHTML = "onTouchEnd detected"
+}
+</script>
+
+<p id="touchMoveEnd"></p>
