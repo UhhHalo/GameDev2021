@@ -83,18 +83,6 @@ function onFocusFunction(x) {
 }
 </script>
 
-<!------------------------------------------>
-
-<h4> Touch Move (Mobile) </h4>
-
-<input type="button" ontouchmove="onTouchMoveFunction()" value="Move your finger on here">
-<script>
-function onTouchMoveFunction() {
-  document.getElementById("touchmove").innerHTML = "onTouch detected"
-}
-</script>
-
-<p id="touchmove"></p>
 
 <!------------------------------------------>
 
@@ -109,15 +97,55 @@ function onScrollFunction() {
 
 <p id="scroll"></p>
 
+
 <!------------------------------------------>
 
+<h4> Touch Move (Mobile) </h4>
+
+<input type="button" ontouchmove="onTouchMoveFunction()" value="Move your finger on here">
+<script>
+function onTouchMoveFunction() {
+  document.getElementById("touchmove").innerHTML = "onTouch detected"
+}
+</script>
+
+<p id="touchmove"></p>
+
+<!---------------------------------------------------->
+  
 <h4> Touch End (Mobile) </h4>
 
 <input type="button" ontouchmoveend="onTouchEndFunction()" value="Move your finger on here">
 <script>
 function onTouchMoveEndFunction() {
-  document.getElementById("touchMovEend").innerHTML = "onTouchEnd detected"
+  document.getElementById("touchMoveEnd").innerHTML = "onTouchEnd detected"
 }
 </script>
 
 <p id="touchMoveEnd"></p>
+
+<!------------------------------------------>
+
+<h4> Touch Cancel (Mobile) </h4>
+
+<input type="button" ontouchcancel="onTouchCancel()" value="on Touch Cancel">
+<script>
+function onTouchCancelFunction() {
+  document.getElementById("touchCancel").innerHTML = "on Touch Cancel detected"
+}
+</script>
+
+<p id="touchCancel"></p>
+
+<!------------------------------------------>
+
+<h4> Touch Start (Mobile) </h4>
+
+<input type="button" ontouchstart="onTouchStart()" value="on Touch Start">
+<script>
+function onTouchStartFunction() {
+  document.getElementById("touchStart").innerHTML = "on Touch Start detected"
+}
+</script>
+
+<p id="touchStart"></p>
