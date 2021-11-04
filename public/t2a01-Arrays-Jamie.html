@@ -40,30 +40,102 @@ document.getElementById('myDiv01').innerHTML = mySum
 
 <br>
 
-Do 7 others
-
-
 <!------------------------------------------------------->
 
-Pick a number 1-10 <input type=text id="myText01" value="3"><br>
+
+Randomly Generated 1-10 <br>
 
 <input type=button value="Example onClick" onClick="{
-  let myTemp = document.getElementById('myText01').value
+  let myTemp = parseFloat('11')
   let mySum = ''
-  document.getElementById('myDiv01').innerHTML = ' '
+  let myRandomValue = Math.floor(Math.random() * 11);
+  document.getElementById('myDiv02').innerHTML = ' '
                                                     
   myArray = new Array()
   myArray[0] = 'Lily'
   myArray[1] = 'Johnathan'                                                  
-  myArray[2] = 'Monke'   
+  myArray[2] = 'Monke'
+  myArray[3] = 'Khalil'
+  myArray[4] = 'Gorilla' 
+  myArray[5] = 'Joe'
+  myArray[6] = 'Michael'
+  myArray[7] = 'Ree'
+  myArray[8] = 'Banana'
+  myArray[9] = 'Random Word'
+  myArray[10] = 'Coffee'   
                                                     
-for (let myLoop=2;  myLoop < myTemp; myLoop++){
-  mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>'
+for (let myLoop=myRandomValue;  myLoop < myTemp; myLoop++){
+  mySum += 'Array #: ' + myLoop + ' ' + myArray[myLoop] + '<br>'
                                                     }
-document.getElementById('myDiv01').innerHTML = mySum
+document.getElementById('myDiv02').innerHTML = mySum
                                                     }">
 
-<div id="myDiv01">...</div>
+<div id="myDiv02">...</div>
 
 <br>
 
+<!------------------------------------------->
+
+Pick a number 1-10 <input type=text id="myDecision" value="3"><br>
+
+<input type=button value="This Button" onClick="{
+
+let x = document.getElementById('myDecision').value
+
+myArray1 = new Array()
+
+myArray1[0] = 'Bob'
+  myArray1[1] = 'Johnathan'                                                  
+  myArray1[2] = 'Monke'
+  myArray1[3] = 'Khalil'
+  myArray1[4] = 'Gorilla' 
+  myArray1[5] = 'Joe'
+  myArray1[6] = 'Michael'
+  myArray1[7] = 'Ree'
+  myArray1[8] = 'Banana'
+  myArray1[9] = 'Random Word'
+  myArray1[10] = 'Coffee' 
+
+document.getElementById('myDiv03').innerHTML = myArray1[x]
+
+}">
+
+<div id="myDiv03">...</div>
+
+<br>
+
+<!------------------------------------------------------------>
+
+Pick Three Numbers 1-10 <br>
+
+First Number <input type=text id="myDecision01" value="5"><br> 
+Second Number <input type=text id="myDecision02" value="2"><br> 
+Third Number <input type=text id="myDecision03" value="8"><br>
+
+<input type=button value="Enter" onClick="{
+
+let myX01 = document.getElementById('myDecision01').value
+let myX02 = document.getElementById('myDecision02').value
+let myX03 = document.getElementById('myDecision03').value
+
+myArray2 = new Array()
+
+  myArray2[0] = 'Bob'
+  myArray2[1] = 'Johnathan'                                                  
+  myArray2[2] = 'Monke'
+  myArray2[3] = 'Khalil'
+  myArray2[4] = 'Gorilla' 
+  myArray2[5] = 'Joe'
+  myArray2[6] = 'Michael'
+  myArray2[7] = 'Ree'
+  myArray2[8] = 'Banana'
+  myArray2[9] = 'Random Word'
+  myArray2[10] = 'Coffee' 
+
+document.getElementById('myDiv04').innerHTML = myArray2[myX01] + ', ' + myArray2[myX02] + ', and ' + myArray2[myX03] + ' were selected!'
+
+}">
+
+<div id="myDiv04">...</div>
+
+<br>
