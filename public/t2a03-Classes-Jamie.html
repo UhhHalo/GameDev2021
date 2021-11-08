@@ -35,4 +35,31 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 	myDog.myShow()
 	}">
 
-<div id="myDiv01">...</div>
+<div id="myDiv01">...</div><br><br>
+
+
+
+
+
+<h4> Another Assignment</h4><br>
+Name: <input type=text id="myText02" value="Prabhdeep"><br>
+Age: <input type=text id="myText03" value="28"><br>
+
+<input type=button value="Example Class Set and Show Class Animal" onClick="{
+let usersName = document.getElementById('myText02').value
+let usersAge = document.getElementById('myText03').value
+
+	class myAnimal {
+	constructor(passName, passAge) {
+	this.myName = passName;
+	this.myAge = passAge;
+	}
+	myShow(){
+	document.getElementById('myDiv02').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old<br>'
+	}
+}        // end class myAnimal
+	myDog = new myAnimal(usersName, usersAge)
+	myDog.myShow()
+	}">
+
+<div id="myDiv02">...</div>
