@@ -1,0 +1,81 @@
+<script>
+	
+	class myAnimal {
+	constructor(passName, passAge) {
+	this.myName = passName
+	this.myAge = passAge
+}
+myShow(){
+	document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+	}
+} // end class myAnimal
+</script> 
+
+
+Version 0.0.1
+<h2 align=center>t2a04-extend-class-by-jamie.html</h2>
+
+<h4> Extending a pre-existing class</h4>
+
+<pre>
+
+class myCat extends myAnimal {
+myShow(){
+	document.getElementById('myDiv01').innerHTML = this.myName
+
+</pre>
+
+
+<h4> Example working Classes Code </h4>
+
+<input type=button value="Example Class Set and Show Class Animal" onClick="{
+
+	myDog = new myAnimal('Snickers', 5)
+	myDog.myShow()
+
+}">
+
+<h4> Example extending Class code</h4>
+
+<input type=button value="Example Extend class Animal" onClick="{
+
+	class myCat extends myAnimal {
+	myShow(){
+	document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>'
+	}
+} // end extended class myCat
+
+
+myPet = new myCat('Fluffy', 14)
+	myPet.myShow()
+}">
+
+<div id="myDiv01">...</div>
+
+
+
+
+
+
+
+<h4> Another Test</h4><br>
+Pet Name: <input type=text id="myText02" value="Jasper"><br>
+Pet Age: <input type=text id="myText03" value="2"><br>
+
+<input type=button value="Example Class Set and Show Class Animal" onClick="{
+let usersName = document.getElementById('myText02').value
+let usersAge = document.getElementById('myText03').value
+	class myAnimal {
+	constructor(passName, passAge) {
+	this.myName = passName;
+	this.myAge = passAge;
+	}
+	myShow(){
+	document.getElementById('myDiv02').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old<br>'
+	}
+}        // end class myAnimal
+	myDog = new myAnimal(usersName, usersAge)
+	myDog.myShow()
+	}">
+
+<div id="myDiv02">...</div>
