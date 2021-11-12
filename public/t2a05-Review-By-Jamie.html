@@ -1,1 +1,314 @@
-hi
+<script>
+
+function myOpacityLevel(){
+	document.getElementById("opacity").style.opacity = 1
+}	
+function myOpacityLevelBack(){
+	document.getElementById("opacity").style.opacity = 0.5
+}
+
+	class myAnimal {
+	constructor(passName, passAge) {
+	this.myName = passName
+	this.myAge = passAge
+}
+myShow(){
+	document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+	}
+} // end class myAnimal
+</script>
+
+
+
+Version 0.0.1 
+
+<h2 align=center> <b> T2A05-Review-By-Jamie.HTML</b></h2><br>
+
+<h4> Basic Stuff </h4>
+
+<b> bold </b> <i> italic </i><br>
+
+<input type=button value="Press Here" onclick="{
+       document.getElementById('myOutputExample').innerHTML = 'Clicking on this button gives output.'
+}">
+  
+<div id="myOutputExample">...</div>
+
+<h4> Lists </h4> 
+
+<br><ul> <font color = "red">Unordered School Classes</font></br>
+<br><li> Science</br>
+<br><li> Game Dev </br>
+<br><li> Culinary Arts </br>
+<br><li> English </br>
+</ul>
+
+<table border=1>
+ <tr><td>A</td><td>B</d></r>
+ <tr><td>1</td><td>2</td></tr>
+</table><br>
+
+
+<h4> Forms </h4>
+
+<form>
+    Enter Name:<br>
+    <input type="text" size="19" name="Name"><br><br>
+    Enter Email:<br>
+    <input type="email" name="Email"><br><br> 
+    Type Your Message:<br> 
+    <textarea name="Contact-Message" rows="6″ cols="20″>
+  </textarea><br><br>
+    Is this form epic? <br>
+    Yes: <input type=radio name="drinks"><br>
+    No (wrong answer): <input type=radio name="drinks"><br>
+    <button type="submit" value="Submit">Submit</button>
+</form>
+
+
+<h4> CSS </h4> 
+
+<b id="everythingCombined2" style= "color:#0000ff; background-Color:pink; border-style:dotted;"> One Click</b><br>
+
+<input type=button value=changeEverything onclick="{
+					 document.getElementById('everythingCombined2').style.color = 'orange'
+					 document.getElementById('everythingCombined2').style.backgroundColor = 'purple'
+                                         document.getElementById('everythingCombined2').style.border = 'solid'
+					 document.getElementById('everythingCombined2').style.opacity = 0.5
+                                         }"><br><br>
+
+
+
+<h4> Multiplying Decimals </h4>
+
+<input id="aNumber1" type=number value="1.8" > <input id="aNumber2" type=number value="1.5" > <br> 
+
+<input type=button value="Multiplying Decimals" onClick="{
+let theNumber2 = document.getElementById('aNumber1').value
+let theNumber3 = document.getElementById('aNumber2').value                                             
+document.getElementById('output07').innerHTML = (parseFloat(theNumber2)*parseFloat(theNumber3))
+}"><br>
+
+<div id="output07">...</div>
+
+
+
+
+<h4> Variables </h4>
+  <input id="myAmericanMoney" type=number value="1" ><br>
+  
+  <input type=button value="American $ to Canadian $ Exchange Rate" onClick="{
+    let myAmericanExchange = document.getElementById('myAmericanMoney').value
+    document.getElementById('myDiv05').innerHTML = ' Your $' + parseFloat(myAmericanExchange) + ' in USD will give you $' + (parseFloat(myAmericanExchange)*parseFloat(1.25)) + ' in CAD'
+    }"><br>
+
+  <div id="myDiv05">...</div>
+
+
+<h4> Decisions </h4> 
+ <h4> If x != 22 <h4>
+
+<input id="myNum07" type=number value="62" ><br>
+
+<input type=button value="Enter" onClick="{
+ 	let myIn07 = parseFloat(document.getElementById('myNum07').value)
+	if (myIn07 != 22){
+	document.getElementById('myDiv07').innerHTML = myIn07 + ' is NOT 22 '
+	} else {
+		document.getElementById('myDiv07').innerHTML = myIn07 + ' IS 22'}
+}">
+
+<div id="myDiv07">...</div>
+
+
+<h4> Loops </h4>
+
+Starting Loops: <input id="myNum02" type=number value="1" ><br>
+Ending Loops: <input id="myNum03" type=number value="10" ><br>
+
+<input type=button value="Enter" onClick="{
+	document.getElementById('myDiv42').innerHTML = ''
+	let myTemp = ''
+	
+	let myStart = parseInt(document.getElementById('myNum02').value)
+	let myMax = parseInt(document.getElementById('myNum03').value)
+	for (let myLoop = myStart; myLoop <= myMax; myLoop++ ){
+		if (myLoop ==  myMax){
+		}
+		
+		myTemp += 'Loop number:  ' + myLoop + '<br>'
+		}
+		document.getElementById('myDiv42').innerHTML = myTemp
+		}">
+		
+
+<div id="myDiv02">...</div>
+
+
+
+<h4> Functions </h4>
+
+<input type=button value="Change Opacity" onClick="{
+	myOpacityLevel()
+}">
+
+<input type=button value="Change Opacity Back" onClick="{
+	myOpacityLevelBack()
+}">
+
+<br><br><br>
+<b id="opacity" style="opacity: 0.5;"> Opacity </b>
+
+<br><br><br>
+
+
+<h4> Events </h4>
+
+
+<h4> On Focus <h4/><br>
+
+Textbox 1: <input type="text" id="1text" onfocus="onFocusFunction(this.id)"><br>
+Textbox 2: <input type="text" id="2text" onfocus="onFocusFunction(this.id)"><br>
+<script>
+function onFocusFunction(x) {
+  document.getElementById(x).style.background = "green";
+}
+</script>
+
+<h4> On Scroll </h4>
+
+<div style="width: 100; height:100; overflow:scroll; border: 1px solid;" onscroll="onScrollFunction()">afafwa '<br>''<br>''<br>'fsjnfjs '<br>''<br>''<br>'</div>
+<script>
+function onScrollFunction() {
+  document.getElementById("scroll").innerHTML = "onScroll detected"
+}
+</script>
+
+<p id="scroll"></p>
+
+<h4> Arrays </h4> 
+
+Randomly Generated 1-10 <br>
+
+<input type=button value="Example onClick" onClick="{
+  let myTemp = parseFloat('11')
+  let mySum = ''
+  let myRandomValue = Math.floor(Math.random() * 11);
+  document.getElementById('myDiv69').innerHTML = ' '
+                                                    
+  myArray = new Array()
+  myArray[0] = 'Lily'
+  myArray[1] = 'Johnathan'                                                  
+  myArray[2] = 'Monke'
+  myArray[3] = 'Khalil'
+  myArray[4] = 'Gorilla' 
+  myArray[5] = 'Joe'
+  myArray[6] = 'Michael'
+  myArray[7] = 'Ree'
+  myArray[8] = 'Banana'
+  myArray[9] = 'Random Word'
+  myArray[10] = 'Coffee'   
+                                                    
+for (let myLoop=myRandomValue;  myLoop < myTemp; myLoop++){
+  mySum += 'Array #: ' + myLoop + ' ' + myArray[myLoop] + '<br>'
+                                                    }
+document.getElementById('myDiv69').innerHTML = mySum
+                                                    }">
+
+<div id="myDiv69">...</div>
+
+<br>
+
+<h4> Objects </h4> 
+
+
+
+
+<input type=button value="Example Object Set and Show" onClick="{
+  let myPerson = {
+  'firstName': 'John',
+  'lastName': 'Doe',
+  'age': 50,
+  'eyeColor': 'blue'
+  }
+  
+  document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has Properties: <br>'
+  document.getElementById('myDiv01').innerHTML += 'The first name is: ' + myPerson.firstName + '<br>'
+  document.getElementById('myDiv01').innerHTML += 'The last name is: ' + myPerson.lastName + '<br>'
+  document.getElementById('myDiv01').innerHTML += 'The age is: ' + myPerson.age + '<br>' 
+  document.getElementById('myDiv01').innerHTML += 'The eye color is: ' + myPerson.eyeColor + '<br>'                 
+}">
+
+<div id="myDiv01">...</div>
+
+<br>
+
+
+
+<h4> Classes </h4> 
+
+Name: <input type=text id="myText22" value="Joe"><br>
+Age: <input type=text id="myText23" value="28"><br>
+
+<input type=button value="Example Class Set and Show Class Animal" onClick="{
+let usersName = document.getElementById('myText22').value
+let usersAge = document.getElementById('myText23').value
+	class myAnimal {
+	constructor(passName, passAge) {
+	this.myName = passName;
+	this.myAge = passAge;
+	}
+	myShow(){
+	document.getElementById('myDiv55').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old<br>'
+	}
+}        // end class myAnimal
+	myDog = new myAnimal(usersName, usersAge)
+	myDog.myShow()
+	}">
+
+<div id="myDiv55">...</div>
+
+
+
+
+<h4> Extended Classes </h4>
+
+<input type=button value="Example Extend class Animal" onClick="{
+	class myCat extends myAnimal {
+	myShow(){
+	document.getElementById('myDiv75').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>'
+	}
+} // end extended class myCat
+myPet = new myCat('Fluffy', 14)
+	myPet.myShow()
+}">
+
+<div id="myDiv75">...</div>
+
+
+
+
+
+
+
+<h4> Another Test</h4><br>
+Pet Name: <input type=text id="myText99" value="Jasper"><br>
+Pet Age: <input type=text id="myText98" value="2"><br>
+
+<input type=button value="Example Class Set and Show Class Animal" onClick="{
+let usersName = document.getElementById('myText99').value
+let usersAge = document.getElementById('myText98').value
+	class myAnimal {
+	constructor(passName, passAge) {
+	this.myName = passName;
+	this.myAge = passAge;
+	}
+	myShow(){
+	document.getElementById('myDiv65').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old<br>'
+	}
+}        // end class myAnimal
+	myDog = new myAnimal(usersName, usersAge)
+	myDog.myShow()
+	}">
+
+<div id="myDiv65">...</div>
