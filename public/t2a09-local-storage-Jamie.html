@@ -12,6 +12,18 @@
    localstorage.setItem('myStoredText',document.getElementById('myText1').value)
 }">   
 
+
+<body onload="{
+   myStorage2 = localStorage.getItem('myStoredText2')
+   if(myStorage2  != null){
+      document.getElementById('myText2').value = myStorage2
+    }
+}">
+
+<body onunload="{
+   localstorage.setItem('myStoredText2',document.getElementById('myText2').value)
+}">   
+
 Text example: <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
 
 <input type="button" value="Store Text" onClick="{
@@ -31,13 +43,13 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
  Number Example: <input id="myText2" type=number size=70 value="" placeholder="Write here to store"><br>
 
 <input type="button" value="Store Number" onClick="{
-   localStorage.setItem('myStoredText', document.getElementById('myText2').value)
-   document.getElementById('myDiv02').innerHTML = (document.getElementById('myText1').value + ' \nHas been stored')
+   localStorage.setItem('myStoredText2', document.getElementById('myText2').value)
+   document.getElementById('myDiv02').innerHTML = (document.getElementById('myText2').value + ' \nHas been stored')
    document.getElementById('myText2').value = ''
 }">
 
 <input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('myText2').value = localStorage.getItem('myStoredText')
+   document.getElementById('myText2').value = localStorage.getItem('myStoredText2')
 }"> 
 
 <div id="myDiv02">...</div>
