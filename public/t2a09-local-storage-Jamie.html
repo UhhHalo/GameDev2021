@@ -16,7 +16,7 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   alert(document.getElementById('myText1').value + ' \nHas been stored')
+   document.getElementById('myDiv01').innerHTML = (document.getElementById('myText1').value + ' \nHas been stored')
    document.getElementById('myText1').value = ''
 }">
 
@@ -24,6 +24,20 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
    document.getElementById('myText1').value = localStorage.getItem('myStoredText')
 }"> 
 
+<div id="myDiv01">...</div>
 
 
+   
+ Number Example: <input id="myText2" type=number size=70 value="" placeholder="Write here to store"><br>
 
+<input type="button" value="Store Number" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myText2').value)
+   document.getElementById('myDiv02').innerHTML = (document.getElementById('myText1').value + ' \nHas been stored')
+   document.getElementById('myText2').value = ''
+}">
+
+<input type="button" value="Retrieve Text" onClick="{
+   document.getElementById('myText2').value = localStorage.getItem('myStoredText')
+}"> 
+
+<div id="myDiv02">...</div>
