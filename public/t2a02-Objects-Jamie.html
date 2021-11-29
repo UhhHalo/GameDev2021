@@ -41,3 +41,34 @@ Nothing: <input type=text id="myText01" value="Useless"><br>
 <div id="myDiv01">...</div>
 
 <br>
+
+
+<h4> My Example </h4>
+
+
+<input type=button value="Submit" onClick="{
+
+  let myPerson = {
+  'firstName': 'Slamlo',
+  'lastName': 'Dawson',
+  'age': 23,
+  'eyeColor': 'green',
+  'favoriteAnimal': 'dog',
+  'bestFriend': 'Joseph',
+  'favoriteFood': 'Pizza'
+                                         
+  }
+  
+  document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has Properties: <br>'
+  document.getElementById('myDiv01').innerHTML += 'The first name is: ' + myPerson.firstName + '<br>'
+  document.getElementById('myDiv01').innerHTML += 'The last name is: ' + myPerson.lastName + '<br>'
+  document.getElementById('myDiv01').innerHTML += 'The age is: ' + myPerson.age + '<br>' 
+  document.getElementById('myDiv01').innerHTML += 'The eye color is: ' + myPerson.eyeColor + '<br>'  
+  document.getElementById('myDiv01').innerHTML += 'Their favorite animal is: ' + myPerson.favoriteAnimal + '<br>'  
+  document.getElementById('myDiv01').innerHTML += 'Their best friend is: ' + myPerson.bestFriend + '<br>' 
+  document.getElementById('myDiv01').innerHTML += 'Their favorite food is: ' + myPerson.favoriteFood + '<br>'  
+}">
+
+<div id="myDiv01">...</div>
+
+<br>
