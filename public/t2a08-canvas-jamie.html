@@ -18,15 +18,15 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.stroke();
 }">
 
-<input type=button value=".fillText('Hello World', 400, 100)" onclick="{
+<input type=button value=".fillText('Yes', 777, 222)" onclick="{
    myContext.font = '20px Arial';
-   myContext.fillText('Hello World', 400, 100);
+   myContext.fillText('Indeed', 777, 222);
    myContext.translate(400, 100);  
    myContext.rotate(60 * Math.PI / 180); 
-   myContext.fillText('Hello World', 10, 10);
+   myContext.fillText('Indeed', 13, 13);
    myContext.stroke();
    myContext.resetTransform();  
-   //myContext.rotate(-60 * Math.PI / 180); 
+   //myContext.rotate(60 * Math.PI / 180); 
 }">
 
 <input type=button value=".quadraticCurveTo(100,220,240,110)" onclick="{
@@ -40,13 +40,14 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 
 <input type=button value=".createLinearGradient(100, 300, 200, 400)" onclick="{
-   let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
+   let myGradient = myContext.createLinearGradient(100, 300, 200, 400, 500);
    myGradient.addColorStop(0, 'red');
    myGradient.addColorStop(0.5, 'blue');
-   myGradient.addColorStop(1, 'yellow');
+   myGradient.addColorStop(0.8, 'yellow');
+   myGradient.addColorStop(1, 'green');
 
    myContext.fillStyle = myGradient;
-   myContext.fillRect(100, 300, 200, 400);
+   myContext.fillRect(100, 300, 200, 400, 500);
 
    // reset fillstyle
    myContext.fillStyle = 'black';
@@ -55,6 +56,7 @@ You use loops and variables to make fast fancy drawings <br><br>
 <input type=button value="clearRect(20, 20, 50, 50)" onclick="{
    myContext.clearRect(20, 20, 50, 50);
 }">
+
 
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
