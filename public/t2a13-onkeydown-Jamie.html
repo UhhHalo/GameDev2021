@@ -1,0 +1,190 @@
+
+ 
+<script>
+   let myInterval
+
+function myIsOnScreen(){
+   if (parseInt(document.getElementById('myDiv01').style.left) > 400) {
+     document.getElementById('myDiv01').style.left = '397px'
+   }
+}
+
+function myIsOnScreen2(){
+   if (parseInt(document.getElementById('myDiv02').style.left) > 2000) {
+     document.getElementById('myDiv02').style.left = '397px'
+   }
+}
+
+function myIsOnScreen3(){
+   if (parseInt(document.getElementById('myDiv03').style.left) > 2000) {
+     document.getElementById('myDiv03').style.left = '397px'
+   }
+}
+
+
+
+document.addEventListener('keydown', function (event) {
+
+   if (event.key === 'd') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv01').style.left = 
+             parseInt(document.getElementById('myDiv01').style.left) + 3
+         myIsOnScreen()
+
+
+} ,20)
+   }
+
+   if (event.key === 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv01').style.left = 
+             parseInt(document.getElementById('myDiv01').style.left) - 3
+         myIsOnScreen()
+
+
+} ,20)
+   }
+
+   if (event.key === 'w') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv01').style.top = 
+             parseInt(document.getElementById('myDiv01').style.top) - 3
+         myIsOnScreen()
+
+
+} ,20)
+   }
+
+   if (event.key === 's') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv01').style.top = 
+             parseInt(document.getElementById('myDiv01').style.top) + 3
+         myIsOnScreen()
+
+
+} ,20)
+   }
+
+if (event.key === 'k') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv02').style.top = 
+             parseInt(document.getElementById('myDiv02').style.top) + 3
+         myIsOnScreen2()
+
+
+} ,20)
+   }
+
+if (event.key === 'i') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv02').style.top = 
+             parseInt(document.getElementById('myDiv02').style.top) - 3
+         myIsOnScreen2()
+
+} ,20)
+   }
+
+   if (event.key === 'j') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv02').style.left = 
+             parseInt(document.getElementById('myDiv02').style.left) - 3
+         myIsOnScreen2()
+
+
+} ,20)
+   }
+
+   if (event.key === 'l') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv02').style.left = 
+             parseInt(document.getElementById('myDiv02').style.left) + 3
+         myIsOnScreen2()
+
+
+} ,20)
+   }
+
+
+   if (event.key === "ArrowRight") {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv03').style.left = 
+             parseInt(document.getElementById('myDiv03').style.left) + 3
+         myIsOnScreen3()
+
+
+} ,20)
+   }
+
+if (event.key === "ArrowLeft") {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv03').style.left = 
+             parseInt(document.getElementById('myDiv03').style.left) - 3
+         myIsOnScreen3()
+
+
+} ,20)
+   }
+
+if (event.key === "ArrowDown") {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv03').style.top = 
+             parseInt(document.getElementById('myDiv03').style.top) + 3
+         myIsOnScreen3()
+
+
+} ,20)
+   }
+
+if (event.key === "ArrowUp") {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv03').style.top = 
+             parseInt(document.getElementById('myDiv03').style.top) - 3
+         myIsOnScreen3()
+
+
+} ,20)
+   }
+});
+
+
+</script>
+
+<!--------------------------------------->
+
+
+
+
+
+
+<h1 align=center>t2a13-onkeydown-Jamie</h1>
+Get WASD working, what about a second object controlled by arrows or IJKL<br>
+
+<div id="myDiv01" style="position:absolute; left:200; top:200; " >Fred</div>
+<div id="myDiv02" style="position:absolute; left:900; top:200; " >Subway</div>
+<div id="myDiv03" style="position:absolute; left:600; top:200; " >Arrow Keys</div>
+
+
