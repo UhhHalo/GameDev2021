@@ -1,9 +1,13 @@
-<body id="myBody" style="background-repeat:repeat; background-size: 56%" background="https://i.imgur.com/Bp9Q98E.png">
+<body id="myBody" style="background-size: 56%" background="https://i.imgur.com/Bp9Q98E.png">
 
 <h1 align=center>t2a11 Game Template by Jamie</h1>
 <br><br><br><br>
 
 <script>
+
+let deathSound = new Audio('Heavy_You are ded not big surprise.mp3')
+let coinSound = new Audio('Mario-coin-sound.mp3')
+let winSound = new Audio('Yay Sound Effect (download).m4a')
 
    // global variables here
    let myGlobalX = 0
@@ -28,39 +32,120 @@ function myHitOther(my1,my2){
    }
 }
 
-
-function myCheckHit(){
-   if ( myHitOther('myImg01','myImg02') ){
-       alert('you lose')
-      //document.getElementById('myImg01').style.left = '20px'
-   }
-
-   // more if statements here
-
+function myCoinChecklist(){
+	if ( myHitOther('myImg01','myImg05') ){
+	document.getElementById('myImg05').style.opacity = 0
+	coinSound.play()
+}
+if ( myHitOther('myImg01','myImg06') ){
+	document.getElementById('myImg06').style.opacity = 0
+	coinSound.play()
+}
 }
 
 
+function myCheckHit(){
+   if ( myHitOther('myImg01','myImg02') ){
+	deathSound.play()
+       alert('you lose')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '50px'
+      document.getElementById('myImg01').style.top = '550px'
+   }
+	if ( myHitOther('myImg01', 'myImg03') ){
+	winSound.play()
+	alert('you win')
+      document.getElementById('myImg01').style.left = '50px'
+      document.getElementById('myImg01').style.top = '550px'
+}
+}
+
+   let myInterval
+
+function myIsOnScreen(){
+   if (parseInt(document.getElementById('myImg01').style.left) > 1500) {
+     document.getElementById('myImg01').style.left = '20px'
+   }
+}
+
+
+document.addEventListener('keydown', function (event) {
+
+   if (event.key === 'd') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) + 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+
+} ,20)
+   }
+
+   if (event.key === 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) - 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+
+} ,20)
+   }
+
+   if (event.key === 'w') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) - 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+} ,20)
+   }
+
+   if (event.key === 's') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) + 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+
+} ,20)
+   }
+});
+
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top:650px; left:50px;"  src="myImage01.jpg">
-<img id="myImg02" style="position:absolute; width:100px; height:80px; top:650px; left:500px;" src="Snake.png">
+<img id="myImg01" style="position:absolute; width:64px; height:64px; top:550px; left:50px;"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEWkK5z2wupgAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
+<img id="myImg02" style="position:absolute; width:100px; height:480px; top:278px; left:600px;" src="https://www.tynker.com/minecraft/api/block?id=5914666d76f293aa658b4647&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1494509165">
+<img id="myImg03" style="position:absolute; width:100px; height:100px; top:595px; left:1482px;" src="https://www.tynker.com/minecraft/api/block?id=59bd9e11949b5613328b4567&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1505598993">
+
+<!-------------------------------------------------------->
+
+<img id="myImg05" style="position:absolute; width:64px; height:64px; top:234px; left:480px;" src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Retro-Coin-icon.png">
+<img id="myImg06" style="position:absolute; width:64px; height:64px; top:452px; left:1280px;" src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Retro-Coin-icon.png">
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
   myClock = setInterval(function(){
-      myGlobalX -= 5
+      myGlobalX -= 20
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
     
 }">
 
-
-<input type=button value="Image Right Fast Button onTouchStart"="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
 
 
 
