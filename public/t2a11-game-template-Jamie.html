@@ -34,10 +34,14 @@ function myHitOther(my1,my2){
 
 function myCoinChecklist(){
 	if ( myHitOther('myImg01','myImg05') ){
-	document.getElementById('myImg05').style.opacity = 0
+	document.getElementById('myImg05').style.left = '10px'
+      document.getElementById('myImg05').style.top = '5px'
+	  document.getElementById('myImg05').style.opacity = 0
 	coinSound.play()
 }
 if ( myHitOther('myImg01','myImg06') ){
+	document.getElementById('myImg06').style.left = '10px'
+      document.getElementById('myImg06').style.top = '5px'
 	document.getElementById('myImg06').style.opacity = 0
 	coinSound.play()
 }
@@ -52,12 +56,22 @@ function myCheckHit(){
 	document.getElementById('myImg06').style.opacity = 1
       document.getElementById('myImg01').style.left = '50px'
       document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '480px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1290px'
    }
 	if ( myHitOther('myImg01', 'myImg03') ){
 	winSound.play()
 	alert('you win')
-      document.getElementById('myImg01').style.left = '50px'
+	document.getElementById('myImg01').style.left = '50px'
       document.getElementById('myImg01').style.top = '550px'
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+	document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '480px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1290px'
 }
 }
 
