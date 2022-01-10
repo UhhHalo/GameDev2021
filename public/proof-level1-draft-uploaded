@@ -1,0 +1,278 @@
+<body id="myBody" style="background-size: 56%" background="https://i.imgur.com/Bp9Q98E.png">
+
+<h1 align=center> Level One</h1>
+<h2 align=center> Hint: Don't trust everything you see</h2>
+<script>
+
+
+let deathSound = new Audio('Heavy_You are ded not big surprise.mp3')
+let coinSound = new Audio('Mario-coin-sound.mp3')
+let winSound = new Audio('Yay Sound Effect (download).m4a')
+let deathCoinLaugh = new Audio('https://www.myinstants.com/media/sounds/00002a5b.mp3')
+
+let myCoinCounter = 0
+let currentScore = 0
+
+   // global variables here
+   let myGlobalX = 0
+   let myClock
+
+
+   // global functions here
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+function myCoinChecklist(){
+	if ( myHitOther('myImg01','myImg05') ){
+	document.getElementById('myImg05').style.left = '10px'
+      document.getElementById('myImg05').style.top = '5px'
+	  document.getElementById('myImg05').style.opacity = 0
+	coinSound.play()
+	myCoinCounter += 1
+	console.log(myCoinCounter)
+}
+if ( myHitOther('myImg01','myImg06') ){
+	document.getElementById('myImg06').style.left = '10px'
+      document.getElementById('myImg06').style.top = '5px'
+	document.getElementById('myImg06').style.opacity = 0
+	coinSound.play()
+	myCoinCounter += 1
+	console.log(myCoinCounter)
+}
+}
+
+function myCheckHit(){
+   if ( myHitOther('myImg01','myImg02') ){
+	deathSound.play()
+	myCoinCounter = 0
+       alert('You Lose!')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+	if ( myHitOther('myImg01', 'myImg03') ){
+	winSound.play()
+	alert('you win! ' + 'Coins: ' + myCoinCounter)
+	myCoinCounter = 0
+	document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+}
+ if ( myHitOther('myImg01','wall01') ){
+	deathSound.play()
+	myCoinCounter = 0
+       alert('You Lose!')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+   if ( myHitOther('myImg01','deathCoin') ){
+	deathCoinLaugh.play()
+	myCoinCounter = 0
+       alert('You hit the deathcoin')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+   if ( myHitOther('myImg01','bottomWall') ){
+	deathSound.play()
+	myCoinCounter = 0
+       alert('You Lose!')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+    if ( myHitOther('myImg01','LongThingy') ){
+	deathSound.play()
+	myCoinCounter = 0
+       alert('How did you miss?! This aint flappy bird.')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	 	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+   if ( myHitOther('myImg01','LongThingy2') ){
+	deathSound.play()
+	myCoinCounter = 0
+       alert('How did you miss?! This aint flappy bird.')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+      if ( myHitOther('myImg01','LongBoi') ){
+	deathSound.play()
+	myCoinCounter = 0
+       alert('How did you miss?! This aint flappy bird.')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+         if ( myHitOther('myImg01','LongBoi2') ){
+	deathSound.play()
+	myCoinCounter = 0
+       alert('How did you miss?! This aint flappy bird.')
+	document.getElementById('myImg05').style.opacity = 1
+	document.getElementById('myImg06').style.opacity = 1
+      document.getElementById('myImg01').style.left = '125px'
+      document.getElementById('myImg01').style.top = '550px'
+	  document.getElementById('myImg05').style.top = '234px'
+	  document.getElementById('myImg05').style.left = '880px'
+	  document.getElementById('myImg06').style.top = '452px'
+	  document.getElementById('myImg06').style.left = '1200px'
+   }
+}
+
+   let myInterval
+
+function myIsOnScreen(){
+   if (parseInt(document.getElementById('myImg01').style.left) > 1500) {
+     document.getElementById('myImg01').style.left = '20px'
+   }
+}
+
+document.addEventListener('keydown', function (event) {
+
+   if (event.key === 'd') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) + 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+
+} ,10)
+   }
+
+   if (event.key === 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) - 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+
+} ,10)
+   }
+
+   if (event.key === 'w') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) - 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+} ,10)
+   }
+
+   if (event.key === 's') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) + 3
+         myIsOnScreen()
+	myCheckHit()
+	myCoinChecklist()
+
+} ,10)
+   }
+});
+
+</script>
+
+<!- Player ->
+<img id="myImg01" style="position:absolute; width:64px; height:64px; top:550px; left:125px;"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEWkK5z2wupgAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
+<img id="myImg03" style="position:absolute; width:100px; height:100px; top:595px; left:1482px;" src="https://www.tynker.com/minecraft/api/block?id=59bd9e11949b5613328b4567&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1505598993">
+
+<!-------------------------------------------------------->
+
+<!- Coins ->
+<img id="myImg05" style="position:absolute; width:64px; height:64px; top:234px; left:880px;" src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Retro-Coin-icon.png">
+<img id="myImg06" style="position:absolute; width:64px; height:64px; top:452px; left:1200px;" src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Retro-Coin-icon.png">
+
+<!----------------------------------------------------------->
+<!- Obstacles ->
+<img id="wall01" style="position:absolute; width:100px; height:480px; top:278px; left:0px;" src="https://www.tynker.com/minecraft/api/block?id=5914666d76f293aa658b4647&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1494509165">
+<img id="bottomWall" style="position:absolute; width:700px; height:100px; top:658px; left:0px;" src="https://www.tynker.com/minecraft/api/block?id=5914666d76f293aa658b4647&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1494509165">
+<img id="topWall" style="position:absolute; width:700px; height:100px; top:178px; left:0px;" src="https://www.tynker.com/minecraft/api/block?id=5914666d76f293aa658b4647&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1494509165">
+<img id="myImg02" style="position:absolute; width:100px; height:480px; top:278px; left:600px;" src="https://www.tynker.com/minecraft/api/block?id=5914666d76f293aa658b4647&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1494509165">
+<img id="deathCoin" style="position:absolute; width:64px; height:64px; top:467px; left:900px;" src="https://i.imgur.com/tihSRNx.png">
+<img id="LongThingy" style="position:absolute; width:100px; height:500px; top:258px; left:1000px;" src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg">
+<img id="LongThingy2" style="position:absolute; width:100px; height:155px; top:0px; left:1000px;" src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg">
+<img id="LongBoi" style="position:absolute; width:100px; height:550px; top:0px; left:1300px;" src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg">
+<img id="LongBoi2" style="position:absolute; width:100px; height:100px; top:650px; left:1300px;" src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg">
+
+
+<input type=button value="Auto Background Left" onclick="{
+  clearInterval(myClock)
+  let myTemp = '100px 0px'
+  myClock = setInterval(function(){
+      myTemp =  myGlobalX + 'px 0px'
+      document.getElementById('myBody').style.backgroundPosition = myTemp
+  }, 100)
+    
+      myGlobalX -= 20
+}">
+
+
+
+
