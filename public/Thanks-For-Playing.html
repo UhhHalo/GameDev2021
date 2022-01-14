@@ -1,3 +1,103 @@
-<body id="myBody" style="background-size: 100%" background="maxresdefault.jpg">
+<body id="myBody" style="background-size: 56%" background="maxresdefault.jpg">
 
 <h1 align=center>Thanks for Playing!</h1>
+<script>
+
+let currentScore = 0
+
+   // global variables here
+   let myGlobalX = 0
+   let myClock
+
+
+   // global functions here
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+
+
+function myCheckHit(){
+   if ( myHitOther('myImg01','myImg03') ){
+	location = 'https://uhhhalo.github.io/GameDev2021/public/proof-level2-draft-uploaded.html'
+   }
+	
+}
+
+   let myInterval
+
+function myIsOnScreen(){
+   if (parseInt(document.getElementById('myImg01').style.left) > 1500) {
+     document.getElementById('myImg01').style.left = '20px'
+   }
+}
+
+document.addEventListener('keydown', function (event) {
+
+   if (event.key === 'd') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) + 3
+         myIsOnScreen()
+	myCheckHit()
+
+} ,10)
+   }
+
+   if (event.key === 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) - 3
+         myIsOnScreen()
+	myCheckHit()
+
+} ,10)
+   }
+
+   if (event.key === 'w') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) - 3
+         myIsOnScreen()
+	myCheckHit()
+} ,10)
+   }
+
+   if (event.key === 's') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) + 3
+         myIsOnScreen()
+	myCheckHit()
+} ,10)
+   }
+});
+
+</script>
+
+<!- Player ->
+<img id="myImg01" style="position:absolute; width:64px; height:64px; top:550px; left:125px;"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEWkK5z2wupgAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
+<img id="myImg03" style="position:absolute; width:100px; height:100px; top:595px; left:1482px;" src="https://www.tynker.com/minecraft/api/block?id=59bd9e11949b5613328b4567&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1505598993">
+
+<!-------------------------------------------------------->
