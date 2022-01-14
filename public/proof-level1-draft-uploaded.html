@@ -263,17 +263,3 @@ document.addEventListener('keydown', function (event) {
 <img id="LongBoi2" style="position:absolute; width:100px; height:100px; top:650px; left:1300px;" src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg">
 
 
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-    
-      myGlobalX -= 20
-}">
-
-
-
-
