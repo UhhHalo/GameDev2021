@@ -1,180 +1,174 @@
 
-<h1 align=center>t2a06-spy-jamie.html</h1>
-<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
+<h1 align=center>Spy-By-Jamie.html</h1>
+
+<textarea id="myArea01" rows=4 cols=70>Hello there! 123</textarea><br> 
 
 
-<input type=button value="encrypt" onclick="{
-let myTemp = ''
-myString = document.getElementById('myArea01').value.toLowerCase().split('')
-for (let myLoop=0;   myLoop < myString.length; myLoop++){
-myTemp = myString[myLoop]
-if (myString[myLoop] == 'a') {myTemp  = 'b'} 
-if (myString[myLoop] == 'b') {myTemp  = 'c'} 
-if (myString[myLoop] == 'c') {myTemp  = 'd'} 
-if (myString[myLoop] == 'd') {myTemp  = 'e'} 
-if (myString[myLoop] == 'e') {myTemp  = 'f'} 
-if (myString[myLoop] == 'f') {myTemp  = 'g'} 
-if (myString[myLoop] == 'g') {myTemp  = 'h'} 
-if (myString[myLoop] == 'h') {myTemp  = 'i'} 
-if (myString[myLoop] == 'i') {myTemp  = 'j'} 
-if (myString[myLoop] == 'j') {myTemp  = 'k'} 
-if (myString[myLoop] == 'k') {myTemp  = 'l'} 
-if (myString[myLoop] == 'l') {myTemp  = 'm'} 
-if (myString[myLoop] == 'm') {myTemp  = 'n'} 
-if (myString[myLoop] == 'n') {myTemp  = 'o'} 
-if (myString[myLoop] == 'o') {myTemp  = 'p'} 
-if (myString[myLoop] == 'p') {myTemp  = 'q'}
-if (myString[myLoop] == 'q') {myTemp  = 'r'} 
-if (myString[myLoop] == 'r') {myTemp  = 's'} 
-if (myString[myLoop] == 's') {myTemp  = 't'} 
-if (myString[myLoop] == 't') {myTemp  = 'u'} 
-if (myString[myLoop] == 'u') {myTemp  = 'v'} 
-if (myString[myLoop] == 'v') {myTemp  = 'w'} 
-if (myString[myLoop] == 'w') {myTemp  = 'x'}
-if (myString[myLoop] == 'x') {myTemp  = 'y'} 
-if (myString[myLoop] == 'y') {myTemp  = 'z'}
-if (myString[myLoop] == 'z') {myTemp  = 'a'} 
+<input type=button value="Encryption" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea01').value.split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
 
-<!------------------------------------------------------>
+//normal letters
+      if (myString[myLoop] == 'a') {myTemp  = 'z'} 
+      if (myString[myLoop] == 'b') {myTemp  = 'y'} 
+      if (myString[myLoop] == 'c') {myTemp  = 'x'} 
+      if (myString[myLoop] == 'd') {myTemp  = 'w'} 
+      if (myString[myLoop] == 'e') {myTemp  = 'v'} 
+      if (myString[myLoop] == 'f') {myTemp  = 'u'} 
+      if (myString[myLoop] == 'g') {myTemp  = 't'} 
+      if (myString[myLoop] == 'h') {myTemp  = 's'} 
+      if (myString[myLoop] == 'i') {myTemp  = 'r'} 
+      if (myString[myLoop] == 'j') {myTemp  = 'q'} 
+      if (myString[myLoop] == 'k') {myTemp  = 'p'} 
+      if (myString[myLoop] == 'l') {myTemp  = 'o'} 
+      if (myString[myLoop] == 'm') {myTemp  = 'n'} 
+      if (myString[myLoop] == 'n') {myTemp  = 'm'} 
+      if (myString[myLoop] == 'o') {myTemp  = 'l'} 
+      if (myString[myLoop] == 'p') {myTemp  = 'k'} 
+      if (myString[myLoop] == 'q') {myTemp  = 'j'} 
+      if (myString[myLoop] == 'r') {myTemp  = 'i'} 
+      if (myString[myLoop] == 's') {myTemp  = 'h'} 
+      if (myString[myLoop] == 't') {myTemp  = 'g'} 
+      if (myString[myLoop] == 'u') {myTemp  = 'f'} 
+      if (myString[myLoop] == 'v') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'w') {myTemp  = 'd'} 
+      if (myString[myLoop] == 'x') {myTemp  = 'c'} 
+      if (myString[myLoop] == 'y') {myTemp  = 'b'} 
+      if (myString[myLoop] == 'z') {myTemp  = 'a'} 
+      
+// capital letters
+      if (myString[myLoop] == 'A') {myTemp  = 'Z'} 
+      if (myString[myLoop] == 'B') {myTemp  = 'Y'} 
+      if (myString[myLoop] == 'C') {myTemp  = 'X'} 
+      if (myString[myLoop] == 'D') {myTemp  = 'W'} 
+      if (myString[myLoop] == 'E') {myTemp  = 'V'} 
+      if (myString[myLoop] == 'F') {myTemp  = 'U'} 
+      if (myString[myLoop] == 'G') {myTemp  = 'T'} 
+      if (myString[myLoop] == 'H') {myTemp  = 'S'} 
+      if (myString[myLoop] == 'I') {myTemp  = 'R'} 
+      if (myString[myLoop] == 'J') {myTemp  = 'Q'} 
+      if (myString[myLoop] == 'K') {myTemp  = 'P'} 
+      if (myString[myLoop] == 'L') {myTemp  = 'O'} 
+      if (myString[myLoop] == 'M') {myTemp  = 'N'} 
+      if (myString[myLoop] == 'N') {myTemp  = 'M'} 
+      if (myString[myLoop] == 'O') {myTemp  = 'L'} 
+      if (myString[myLoop] == 'P') {myTemp  = 'K'} 
+      if (myString[myLoop] == 'Q') {myTemp  = 'J'} 
+      if (myString[myLoop] == 'R') {myTemp  = 'I'} 
+      if (myString[myLoop] == 'S') {myTemp  = 'H'} 
+      if (myString[myLoop] == 'T') {myTemp  = 'G'} 
+      if (myString[myLoop] == 'U') {myTemp  = 'F'} 
+      if (myString[myLoop] == 'V') {myTemp  = 'E'} 
+      if (myString[myLoop] == 'W') {myTemp  = 'D'} 
+      if (myString[myLoop] == 'X') {myTemp  = 'C'} 
+      if (myString[myLoop] == 'Y') {myTemp  = 'B'} 
+      if (myString[myLoop] == 'Z') {myTemp  = 'A'} 
 
-
-if (myString[myLoop] == 'A') {myTemp  = 'B'} 
-if (myString[myLoop] == 'B') {myTemp  = 'C'} 
-if (myString[myLoop] == 'C') {myTemp  = 'D'} 
-if (myString[myLoop] == 'D') {myTemp  = 'E'} 
-if (myString[myLoop] == 'E') {myTemp  = 'F'} 
-if (myString[myLoop] == 'F') {myTemp  = 'G'} 
-if (myString[myLoop] == 'G') {myTemp  = 'H'} 
-if (myString[myLoop] == 'H') {myTemp  = 'I'} 
-if (myString[myLoop] == 'I') {myTemp  = 'J'} 
-if (myString[myLoop] == 'J') {myTemp  = 'K'} 
-if (myString[myLoop] == 'K') {myTemp  = 'L'} 
-if (myString[myLoop] == 'L') {myTemp  = 'M'} 
-if (myString[myLoop] == 'M') {myTemp  = 'N'} 
-if (myString[myLoop] == 'N') {myTemp  = 'O'} 
-if (myString[myLoop] == 'O') {myTemp  = 'P'} 
-if (myString[myLoop] == 'P') {myTemp  = 'Q'}
-if (myString[myLoop] == 'Q') {myTemp  = 'R'} 
-if (myString[myLoop] == 'R') {myTemp  = 'S'} 
-if (myString[myLoop] == 'S') {myTemp  = 'T'} 
-if (myString[myLoop] == 'T') {myTemp  = 'U'} 
-if (myString[myLoop] == 'U') {myTemp  = 'V'} 
-if (myString[myLoop] == 'V') {myTemp  = 'W'} 
-if (myString[myLoop] == 'W') {myTemp  = 'X'}
-if (myString[myLoop] == 'X') {myTemp  = 'Y'} 
-if (myString[myLoop] == 'Y') {myTemp  = 'Z'}
-if (myString[myLoop] == 'Z') {myTemp  = 'A'} 
-
-<!------------------------------------------------------>
-
-
-if (myString[myLoop] == '1') {myTemp  = '2'} 
-if (myString[myLoop] == '2') {myTemp  = '3'} 
-if (myString[myLoop] == '3') {myTemp  = '4'} 
-if (myString[myLoop] == '4') {myTemp  = '5'} 
-if (myString[myLoop] == '5') {myTemp  = '6'} 
-if (myString[myLoop] == '6') {myTemp  = '7'} 
-if (myString[myLoop] == '7') {myTemp  = '8'} 
-if (myString[myLoop] == '8') {myTemp  = '9'} 
-if (myString[myLoop] == '9') {myTemp  = '1'} 
-
+// numbers
+      if (myString[myLoop] == '1') {myTemp  = '0'}
+      if (myString[myLoop] == '2') {myTemp  = '9'} 
+      if (myString[myLoop] == '3') {myTemp  = '8'} 
+      if (myString[myLoop] == '4') {myTemp  = '6'} 
+      if (myString[myLoop] == '5') {myTemp  = '4'} 
+      if (myString[myLoop] == '6') {myTemp  = '3'} 
+      if (myString[myLoop] == '7') {myTemp  = '5'} 
+      if (myString[myLoop] == '8') {myTemp  = '7'} 
+      if (myString[myLoop] == '9') {myTemp  = '2'}
+      if (myString[myLoop] == '0') {myTemp  = '1'}
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
 
 
+
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
+<input type=button value="Decryption" onclick="{
+   let myTemp1 = ''
+   myString1 = myString
+   for(let myLoop=0; myLoop < myString1.length; myLoop++){
+      myTemp1 = myString1[myLoop]
+// decrypting letters
+      if (myString1[myLoop] == '_') {myTemp1  = ' '} 
+      if (myString1[myLoop] == 'z') {myTemp1  = 'a'} 
+      if (myString1[myLoop] == 'y') {myTemp1  = 'b'} 
+      if (myString1[myLoop] == 'x') {myTemp1  = 'c'} 
+      if (myString1[myLoop] == 'w') {myTemp1  = 'd'} 
+      if (myString1[myLoop] == 'v') {myTemp1  = 'e'} 
+      if (myString1[myLoop] == 'u') {myTemp1  = 'f'} 
+      if (myString1[myLoop] == 't') {myTemp1  = 'g'} 
+      if (myString1[myLoop] == 's') {myTemp1  = 'h'} 
+      if (myString1[myLoop] == 'r') {myTemp1  = 'i'} 
+      if (myString1[myLoop] == 'q') {myTemp1  = 'j'} 
+      if (myString1[myLoop] == 'p') {myTemp1  = 'k'} 
+      if (myString1[myLoop] == 'o') {myTemp1  = 'l'} 
+      if (myString1[myLoop] == 'n') {myTemp1  = 'm'} 
+      if (myString1[myLoop] == 'm') {myTemp1  = 'n'} 
+      if (myString1[myLoop] == 'l') {myTemp1  = 'o'} 
+      if (myString1[myLoop] == 'k') {myTemp1  = 'p'} 
+      if (myString1[myLoop] == 'j') {myTemp1  = 'q'} 
+      if (myString1[myLoop] == 'i') {myTemp1  = 'r'} 
+      if (myString1[myLoop] == 'h') {myTemp1  = 's'} 
+      if (myString1[myLoop] == 'g') {myTemp1  = 't'} 
+      if (myString1[myLoop] == 'f') {myTemp1  = 'u'} 
+      if (myString1[myLoop] == 'e') {myTemp1  = 'v'} 
+      if (myString1[myLoop] == 'd') {myTemp1  = 'w'} 
+      if (myString1[myLoop] == 'c') {myTemp1  = 'x'} 
+      if (myString1[myLoop] == 'b') {myTemp1  = 'y'} 
+      if (myString1[myLoop] == 'a') {myTemp1  = 'z'} 
+
+//decrypting letters
+
+      if (myString1[myLoop] == 'A') {myTemp1  = 'Z'} 
+      if (myString1[myLoop] == 'B') {myTemp1  = 'Y'} 
+      if (myString1[myLoop] == 'C') {myTemp1 = 'X'} 
+      if (myString1[myLoop] == 'D') {myTemp1  = 'W'} 
+      if (myString1[myLoop] == 'E') {myTemp1  = 'V'} 
+      if (myString1[myLoop] == 'F') {myTemp1  = 'U'} 
+      if (myString1[myLoop] == 'G') {myTemp1  = 'T'} 
+      if (myString1[myLoop] == 'H') {myTemp1  = 'S'} 
+      if (myString1[myLoop] == 'I') {myTemp1  = 'R'} 
+      if (myString1[myLoop] == 'J') {myTemp1  = 'Q'} 
+      if (myString1[myLoop] == 'K') {myTemp1  = 'P'} 
+      if (myString1[myLoop] == 'L') {myTemp1 = 'O'} 
+      if (myString1[myLoop] == 'M') {myTemp1  = 'N'} 
+      if (myString1[myLoop] == 'N') {myTemp1  = 'M'} 
+      if (myString1[myLoop] == 'O') {myTemp1  = 'L'} 
+      if (myString1[myLoop] == 'P') {myTemp1  = 'K'} 
+      if (myString1[myLoop] == 'Q') {myTemp1 = 'J'} 
+      if (myString1[myLoop] == 'R') {myTemp1  = 'I'} 
+      if (myString1[myLoop] == 'S') {myTemp1  = 'H'} 
+      if (myString1[myLoop] == 'T') {myTemp1  = 'G'} 
+      if (myString1[myLoop] == 'U') {myTemp1  = 'F'} 
+      if (myString1[myLoop] == 'V') {myTemp1  = 'E'} 
+      if (myString1[myLoop] == 'W') {myTemp1  = 'D'} 
+      if (myString1[myLoop] == 'X') {myTemp1  = 'C'} 
+      if (myString1[myLoop] == 'Y') {myTemp1  = 'B'} 
+      if (myString1[myLoop] == 'Z') {myTemp1  = 'A'} 
 
 
+     
+ //decrypting numbers
+ 
+      if (myString1[myLoop] == '0') {myTemp1  = '1'}
+      if (myString1[myLoop] == '9') {myTemp1  = '2'} 
+      if (myString1[myLoop] == '8') {myTemp1  = '3'} 
+      if (myString1[myLoop] == '6') {myTemp1  = '4'} 
+      if (myString1[myLoop] == '4') {myTemp1  = '5'} 
+      if (myString1[myLoop] == '3') {myTemp1  = '6'} 
+      if (myString1[myLoop] == '5') {myTemp1  = '7'} 
+      if (myString1[myLoop] == '7') {myTemp1  = '8'} 
+      if (myString1[myLoop] == '2') {myTemp1  = '9'}
+      if (myString1[myLoop] == '1') {myTemp1  = '0'}
+    
 
 
-
-
-
-
-
-
-
-
-
-<h4> Decryption </h4>
-
-
-<textarea id="myArea05" rows=4 cols=70></textarea><br>
-
-<input type=button value="decrypt" onclick="{
- let myTemp = ''
- myString = document.getElementById('myArea02').value.toLowerCase().split('')
-for (let myLoop=0;   myLoop < myString.length; myLoop++){
-myTemp = myString[myLoop]
-if (myString[myLoop] == 'z') {myTemp  = 'y'} 
-if (myString[myLoop] == 'y') {myTemp  = 'x'} 
-if (myString[myLoop] == 'x') {myTemp  = 'w'} 
-if (myString[myLoop] == 'w') {myTemp  = 'v'} 
-if (myString[myLoop] == 'v') {myTemp  = 'u'} 
-if (myString[myLoop] == 'u') {myTemp  = 't'} 
-if (myString[myLoop] == 't') {myTemp  = 's'} 
-if (myString[myLoop] == 's') {myTemp  = 'r'} 
-if (myString[myLoop] == 'r') {myTemp  = 'q'} 
-if (myString[myLoop] == 'q') {myTemp  = 'p'} 
-if (myString[myLoop] == 'p') {myTemp  = 'o'} 
-if (myString[myLoop] == 'o') {myTemp  = 'n'}
-if (myString[myLoop] == 'n') {myTemp  = 'm'} 
-if (myString[myLoop] == 'm') {myTemp  = 'l'} 
-if (myString[myLoop] == 'l') {myTemp  = 'k'} 
-if (myString[myLoop] == 'k') {myTemp  = 'j'}
-if (myString[myLoop] == 'j') {myTemp  = 'i'} 
-if (myString[myLoop] == 'i') {myTemp  = 'h'} 
-if (myString[myLoop] == 'h') {myTemp  = 'g'}
-if (myString[myLoop] == 'g') {myTemp  = 'f'}
-if (myString[myLoop] == 'f') {myTemp  = 'e'} 
-if (myString[myLoop] == 'e') {myTemp  = 'd'} 
-if (myString[myLoop] == 'd') {myTemp  = 'c'} 
-if (myString[myLoop] == 'c') {myTemp  = 'b'} 
-if (myString[myLoop] == 'b') {myTemp  = 'a'} 
-if (myString[myLoop] == 'a') {myTemp  = 'z'} 
-
-<!---------------------------------------------->
-
-if (myString[myLoop] == 'Z') {myTemp  = 'Y'} 
-if (myString[myLoop] == 'Y') {myTemp  = 'X'} 
-if (myString[myLoop] == 'X') {myTemp  = 'W'} 
-if (myString[myLoop] == 'W') {myTemp  = 'V'} 
-if (myString[myLoop] == 'V') {myTemp  = 'U'} 
-if (myString[myLoop] == 'U') {myTemp  = 'T'} 
-if (myString[myLoop] == 'T') {myTemp  = 'S'} 
-if (myString[myLoop] == 'S') {myTemp  = 'R'} 
-if (myString[myLoop] == 'R') {myTemp  = 'Q'} 
-if (myString[myLoop] == 'Q') {myTemp  = 'P'} 
-if (myString[myLoop] == 'P') {myTemp  = 'O'} 
-if (myString[myLoop] == 'O') {myTemp  = 'N'}
-if (myString[myLoop] == 'N') {myTemp  = 'M'} 
-if (myString[myLoop] == 'M') {myTemp  = 'L'} 
-if (myString[myLoop] == 'L') {myTemp  = 'K'} 
-if (myString[myLoop] == 'K') {myTemp  = 'J'}
-if (myString[myLoop] == 'J') {myTemp  = 'I'} 
-if (myString[myLoop] == 'I') {myTemp  = 'H'} 
-if (myString[myLoop] == 'H') {myTemp  = 'G'}
-if (myString[myLoop] == 'G') {myTemp  = 'F'}
-if (myString[myLoop] == 'F') {myTemp  = 'E'} 
-if (myString[myLoop] == 'E') {myTemp  = 'D'} 
-if (myString[myLoop] == 'D') {myTemp  = 'C'} 
-if (myString[myLoop] == 'C') {myTemp  = 'B'} 
-if (myString[myLoop] == 'B') {myTemp  = 'A'} 
-if (myString[myLoop] == 'A') {myTemp  = 'Z'} 
-
-
-      myString[myLoop] = myTemp
-   }
-   document.getElementById('myArea04').value = myString.join('')
+      myString1[myLoop] = myTemp1 
+      document.getElementById('myArea03').value = myString1.join('')
+      
+}
 }"><br><br>
-
-
-<textarea id="myArea04" rows=4 cols=70></textarea><br> 
-
-
-
-
-
+<textarea id="myArea03" rows=4 cols=70></textarea><br> 
