@@ -72,3 +72,40 @@ Nothing: <input type=text id="myText01" value="Useless"><br>
 <div id="myDiv02">...</div>
 
 <br>
+
+<h4> Type your Answers </h4>
+
+First Name: <input id="fN" type=text value=Jarold><br>
+Last Name: <input id="lN" type=text value=Jamlos><br>
+Age: <input id="theAge" type=text value=16><br>
+Eye Color: <input id="eC" type=text value=Green><br>
+Favorite Game: <input id="fG" type=text value=COD><br>
+Best Friend: <input id="bF" type=text value=Luke><br>
+
+<input type=button value="Make and Show Object" onclick="{
+ let a = document.getElementById('fN').value
+ let a2 = document.getElementById('lN').value
+ let a3 = document.getElementById('theAge').value
+ let a4 = document.getElementById('eC').value   
+ let a5 = document.getElementById('fG').value   
+ let a6 = document.getElementById('bF').value                                                    
+ let myObject = {
+       'firstName': a,
+       'lastName': a2,                                                  
+       'age' : a3,
+       'eyeColor' : a4,
+       'favoriteGame' :a5,
+       'bestFriend': a6                                                  
+       }
+document.getElementById('myDiv03').innerHTML ='First Name: ' + myObject.firstName + '<br>'
+document.getElementById('myDiv03').innerHTML +='Last Name: ' + myObject.lastName + '<br>'
+document.getElementById('myDiv03').innerHTML +='Age: ' + myObject.age + '<br>'                                                         
+document.getElementById('myDiv03').innerHTML +='Eye Color: ' + myObject.eyeColor + '<br>' 
+document.getElementById('myDiv03').innerHTML +='Favorite Game: ' + myObject.favoriteGame + '<br>' 
+document.getElementById('myDiv03').innerHTML +='Best Friend: ' + myObject.bestFriend                                                         
+                                                         
+}"><br><br>
+
+
+<div id="myDiv03">...</div><br><br>
+	
