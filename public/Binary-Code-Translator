@@ -1,0 +1,170 @@
+
+<h1 align=center>The Binary Encryption/Decryptor</h1>
+
+<textarea id="myArea01" rows=4 cols=70>Convert this into Binary</textarea><br> 
+
+
+<input type=button value="Encryption" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea01').value.split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+
+//normal letters
+      if (myString[myLoop] == 'a') {myTemp  = '01100001'} 
+      if (myString[myLoop] == 'b') {myTemp  = '01100010'} 
+      if (myString[myLoop] == 'c') {myTemp  = '01100011'} 
+      if (myString[myLoop] == 'd') {myTemp  = '01100100'} 
+      if (myString[myLoop] == 'e') {myTemp  = '01100101'} 
+      if (myString[myLoop] == 'f') {myTemp  = '01100110'} 
+      if (myString[myLoop] == 'g') {myTemp  = '01100111'} 
+      if (myString[myLoop] == 'h') {myTemp  = '01101000'} 
+      if (myString[myLoop] == 'i') {myTemp  = '01101001'} 
+      if (myString[myLoop] == 'j') {myTemp  = '01101010'} 
+      if (myString[myLoop] == 'k') {myTemp  = '01101011'} 
+      if (myString[myLoop] == 'l') {myTemp  = '01101100'} 
+      if (myString[myLoop] == 'm') {myTemp  = '01101101'} 
+      if (myString[myLoop] == 'n') {myTemp  = '01101110'} 
+      if (myString[myLoop] == 'o') {myTemp  = '01101111'} 
+      if (myString[myLoop] == 'p') {myTemp  = '01110000'} 
+      if (myString[myLoop] == 'q') {myTemp  = '01110001'} 
+      if (myString[myLoop] == 'r') {myTemp  = '01110010'} 
+      if (myString[myLoop] == 's') {myTemp  = '01110011'} 
+      if (myString[myLoop] == 't') {myTemp  = '01110100'} 
+      if (myString[myLoop] == 'u') {myTemp  = '01110101'} 
+      if (myString[myLoop] == 'v') {myTemp  = '01110110'} 
+      if (myString[myLoop] == 'w') {myTemp  = '01110111'} 
+      if (myString[myLoop] == 'x') {myTemp  = '01111000'} 
+      if (myString[myLoop] == 'y') {myTemp  = '01111001'} 
+      if (myString[myLoop] == 'z') {myTemp  = '01111010'} 
+      
+// capital letters
+      if (myString[myLoop] == 'A') {myTemp  = '01000001'} 
+      if (myString[myLoop] == 'B') {myTemp  = '01000010'} 
+      if (myString[myLoop] == 'C') {myTemp  = '01000011'} 
+      if (myString[myLoop] == 'D') {myTemp  = '01000100'} 
+      if (myString[myLoop] == 'E') {myTemp  = '01000101'} 
+      if (myString[myLoop] == 'F') {myTemp  = '01000110'} 
+      if (myString[myLoop] == 'G') {myTemp  = '01000111'} 
+      if (myString[myLoop] == 'H') {myTemp  = '01001000'} 
+      if (myString[myLoop] == 'I') {myTemp  = '01001001'} 
+      if (myString[myLoop] == 'J') {myTemp  = '01001010'} 
+      if (myString[myLoop] == 'K') {myTemp  = '01001011'} 
+      if (myString[myLoop] == 'L') {myTemp  = '01001100'} 
+      if (myString[myLoop] == 'M') {myTemp  = '01001101'} 
+      if (myString[myLoop] == 'N') {myTemp  = '01001110'} 
+      if (myString[myLoop] == 'O') {myTemp  = '01001111'} 
+      if (myString[myLoop] == 'P') {myTemp  = '01010000'} 
+      if (myString[myLoop] == 'Q') {myTemp  = '01010001'} 
+      if (myString[myLoop] == 'R') {myTemp  = '01010010'} 
+      if (myString[myLoop] == 'S') {myTemp  = '01010011'} 
+      if (myString[myLoop] == 'T') {myTemp  = '01010100'} 
+      if (myString[myLoop] == 'U') {myTemp  = '01010101'} 
+      if (myString[myLoop] == 'V') {myTemp  = '01010110'} 
+      if (myString[myLoop] == 'W') {myTemp  = '01010111'} 
+      if (myString[myLoop] == 'X') {myTemp  = '01011000'} 
+      if (myString[myLoop] == 'Y') {myTemp  = '01011001'} 
+      if (myString[myLoop] == 'Z') {myTemp  = '01011010'} 
+
+// encryption of numbers 
+      if (myString[myLoop] == '1') {myTemp  = '00110001'}
+      if (myString[myLoop] == '2') {myTemp  = '00110010'} 
+      if (myString[myLoop] == '3') {myTemp  = '00110011'} 
+      if (myString[myLoop] == '4') {myTemp  = '00110100'} 
+      if (myString[myLoop] == '5') {myTemp  = '00110101'} 
+      if (myString[myLoop] == '6') {myTemp  = '00110110'} 
+      if (myString[myLoop] == '7') {myTemp  = '00110111'} 
+      if (myString[myLoop] == '8') {myTemp  = '00111000'} 
+      if (myString[myLoop] == '9') {myTemp  = '00111001'}
+      if (myString[myLoop] == '0') {myTemp  = '00110000'}
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea02').value = myString.join('')
+}"><br><br>
+
+
+
+<textarea id="myArea02" rows=4 cols=70></textarea><br> 
+
+<input type=button value="Decryption" onclick="{
+   let myTemp1 = ''
+   myString1 = myString
+   for(let myLoop=0; myLoop < myString1.length; myLoop++){
+      myTemp1 = myString1[myLoop]
+// decrypting letters
+      if (myString1[myLoop] == '_') {myTemp1  = ' '} 
+      if (myString1[myLoop] == '01100001') {myTemp1  = 'a'} 
+      if (myString1[myLoop] == '01100010') {myTemp1  = 'b'} 
+      if (myString1[myLoop] == '01100011') {myTemp1  = 'c'} 
+      if (myString1[myLoop] == '01100100') {myTemp1  = 'd'} 
+      if (myString1[myLoop] == '01100101') {myTemp1  = 'e'} 
+      if (myString1[myLoop] == '01100110') {myTemp1  = 'f'} 
+      if (myString1[myLoop] == '01100111') {myTemp1  = 'g'} 
+      if (myString1[myLoop] == '01101000') {myTemp1  = 'h'} 
+      if (myString1[myLoop] == '01101001') {myTemp1  = 'i'} 
+      if (myString1[myLoop] == '01101010') {myTemp1  = 'j'} 
+      if (myString1[myLoop] == '01101011') {myTemp1  = 'k'} 
+      if (myString1[myLoop] == '01101100') {myTemp1  = 'l'} 
+      if (myString1[myLoop] == '01101101') {myTemp1  = 'm'} 
+      if (myString1[myLoop] == '01101110') {myTemp1  = 'n'} 
+      if (myString1[myLoop] == '01101111') {myTemp1  = 'o'} 
+      if (myString1[myLoop] == '01110000') {myTemp1  = 'p'} 
+      if (myString1[myLoop] == '01110001') {myTemp1  = 'q'} 
+      if (myString1[myLoop] == '01110010') {myTemp1  = 'r'} 
+      if (myString1[myLoop] == '01110011') {myTemp1  = 's'} 
+      if (myString1[myLoop] == '01110100') {myTemp1  = 't'} 
+      if (myString1[myLoop] == '01110101') {myTemp1  = 'u'} 
+      if (myString1[myLoop] == '01110110') {myTemp1  = 'v'} 
+      if (myString1[myLoop] == '01110111') {myTemp1  = 'w'} 
+      if (myString1[myLoop] == '01111000') {myTemp1  = 'x'} 
+      if (myString1[myLoop] == '01111001') {myTemp1  = 'y'} 
+      if (myString1[myLoop] == '01111010') {myTemp1  = 'z'} 
+
+//decrypting letters
+
+      if (myString1[myLoop] == '01000001') {myTemp1  = 'A'} 
+      if (myString1[myLoop] == '01000010') {myTemp1  = 'B'} 
+      if (myString1[myLoop] == '01000011') {myTemp1  = 'C'} 
+      if (myString1[myLoop] == '01000100') {myTemp1  = 'D'} 
+      if (myString1[myLoop] == '01000101') {myTemp1  = 'E'} 
+      if (myString1[myLoop] == '01000110') {myTemp1  = 'F'} 
+      if (myString1[myLoop] == '01000111') {myTemp1  = 'G'} 
+      if (myString1[myLoop] == '01001000') {myTemp1  = 'H'} 
+      if (myString1[myLoop] == '01001001') {myTemp1  = 'I'} 
+      if (myString1[myLoop] == '01001010') {myTemp1  = 'J'} 
+      if (myString1[myLoop] == '01001011') {myTemp1  = 'K'} 
+      if (myString1[myLoop] == '01001100') {myTemp1  = 'L'} 
+      if (myString1[myLoop] == '01001101') {myTemp1  = 'M'} 
+      if (myString1[myLoop] == '01001110') {myTemp1  = 'N'} 
+      if (myString1[myLoop] == '01001111') {myTemp1  = 'O'} 
+      if (myString1[myLoop] == '01010000') {myTemp1  = 'P'} 
+      if (myString1[myLoop] == '01010001') {myTemp1  = 'Q'} 
+      if (myString1[myLoop] == '01010010') {myTemp1  = 'R'} 
+      if (myString1[myLoop] == '01010011') {myTemp1  = 'S'} 
+      if (myString1[myLoop] == '01010100') {myTemp1  = 'T'} 
+      if (myString1[myLoop] == '01010101') {myTemp1  = 'U'} 
+      if (myString1[myLoop] == '01010110') {myTemp1  = 'V'} 
+      if (myString1[myLoop] == '01010111') {myTemp1  = 'W'} 
+      if (myString1[myLoop] == '01011000') {myTemp1  = 'X'} 
+      if (myString1[myLoop] == '01011001') {myTemp1  = 'Y'} 
+      if (myString1[myLoop] == '01011010') {myTemp1  = 'Z'} 
+
+//decrypting numbers
+    
+      if (myString1[myLoop] == '00110001') {myTemp1  = '1'}
+      if (myString1[myLoop] == '00110010') {myTemp1  = '2'} 
+      if (myString1[myLoop] == '00110011') {myTemp1  = '3'} 
+      if (myString1[myLoop] == '00110100') {myTemp1  = '4'} 
+      if (myString1[myLoop] == '00110101') {myTemp1  = '5'} 
+      if (myString1[myLoop] == '00110110') {myTemp1  = '6'} 
+      if (myString1[myLoop] == '00110111') {myTemp1  = '7'} 
+      if (myString1[myLoop] == '00111000') {myTemp1  = '8'} 
+      if (myString1[myLoop] == '00111001') {myTemp1  = '9'}
+      if (myString1[myLoop] == '00110000') {myTemp1  = '0'}
+
+      myString1[myLoop] = myTemp1 
+      document.getElementById('myArea03').value = myString1.join('')
+      
+}
+}"><br><br>
+<textarea id="myArea03" rows=4 cols=70></textarea><br> 
