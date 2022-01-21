@@ -1,55 +1,63 @@
 
-<h2>t2a09-local-storage-name by Jamie. Instructions:</h2>
+
+<h2>t2a09-Local-Storage-by-Jamie.html</h2>
 
 <body onload="{
+   myStorage1 = localStorage.getItem('myOther')
    myStorage = localStorage.getItem('myStoredText')
    if(myStorage  != null){
-      document.getElementById('myText1').value = myStorage 
+      document.getElementById('myText02').value = myStorage 
     }
+   if(myStorage1  != null){
+      document.getElementById('myText01').value = myStorage1
+    }
+
+
+if(myHealthStorage != null){
+document.getElementById('myHealth').value = myHealthStorage
+}
+
+if(myLevelStorage != null){
+document.getElementById('myLevels').value = myLevelStorage
+}
+
+
+
+
 }">
 
 <body onunload="{
-   localstorage.setItem('myStoredText',document.getElementById('myText1').value)
+   localstorage.setItem('myStoredText',document.getElementById('myText02').value)
+   localstorage.setItem('myOther',document.getElementById('myText01').value)
 }">   
-
-
-<body onload="{
-   myStorage2 = localStorage.getItem('myStoredText2')
-   if(myStorage2  != null){
-      document.getElementById('myText2').value = myStorage2
-    }
-}">
-
-<body onunload="{
-   localstorage.setItem('myStoredText2',document.getElementById('myText2').value)
-}">   
-
-Text example: <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
+<br><br>
+Text example: <input id="myText02" type=text size=70 value="Add Something Here" placeholder="Write here to store"><br>
 
 <input type="button" value="Store Text" onClick="{
-   localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   document.getElementById('myDiv01').innerHTML = (document.getElementById('myText1').value + ' \nHas been stored')
-   document.getElementById('myText1').value = ''
+   localStorage.setItem('myStoredText', document.getElementById('myText02').value)
+   alert(document.getElementById('myText02').value + ' \nHas been stored')
+   document.getElementById('myText02').value = ''
+}">
+<input type="button" value="Retrieve Text" onClick="{
+   document.getElementById('myText02).value = localStorage.getItem('myStoredText')
 }">
 
-<input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('myText1').value = localStorage.getItem('myStoredText')
-}"> 
+ <br><br>
 
-<div id="myDiv01">...</div>
+Number Example: <input id="myText01" type="Text" value="53">
 
+ <br>
 
-   
- Number Example: <input id="myText2" type=number size=70 value="" placeholder="Write here to store"><br>
-
-<input type="button" value="Store Number" onClick="{
-   localStorage.setItem('myStoredText2', document.getElementById('myText2').value)
-   document.getElementById('myDiv02').innerHTML = (document.getElementById('myText2').value + ' \nHas been stored')
-   document.getElementById('myText2').value = ''
+<input type="Button" value="Submit" onClick="{
+  localStorage.setItem('myOther', document.getElementById('myText01').value)
+  alert(document.getElementById('myText01').value + ' \nHas been stored')
+  document.getElementById('myText01').value = ''
 }">
 
-<input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('myText2').value = localStorage.getItem('myStoredText2')
-}"> 
+<input type="button" value="Retrieve Number" onClick="{
+   document.getElementById('myText01').value = localStorage.getItem('myOther')
+}">
 
-<div id="myDiv02">...</div>
+
+<br><br>
+
